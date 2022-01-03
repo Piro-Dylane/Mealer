@@ -10,10 +10,58 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2022_01_03_143227) do
+ActiveRecord::Schema.define(version: 2022_01_03_155115) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "categories", force: :cascade do |t|
+    t.string "name"
+    t.bigint "event_id", null: false
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["event_id"], name: "index_categories_on_event_id"
+  end
+
+  create_table "events", force: :cascade do |t|
+    t.string "title"
+    t.date "date"
+    t.time "time"
+    t.text "description"
+    t.bigint "user_id", null: false
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["user_id"], name: "index_events_on_user_id"
+  end
+
+  create_table "items", force: :cascade do |t|
+    t.string "name"
+    t.integer "quantity"
+    t.bigint "member_id", null: false
+    t.bigint "category_id", null: false
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["category_id"], name: "index_items_on_category_id"
+    t.index ["member_id"], name: "index_items_on_member_id"
+  end
+
+  create_table "members", force: :cascade do |t|
+    t.bigint "user_id", null: false
+    t.bigint "event_id", null: false
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["event_id"], name: "index_members_on_event_id"
+    t.index ["user_id"], name: "index_members_on_user_id"
+  end
+
+  create_table "suggestions", force: :cascade do |t|
+    t.string "name"
+    t.integer "vote"
+    t.bigint "category_id", null: false
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["category_id"], name: "index_suggestions_on_category_id"
+  end
 
   create_table "users", force: :cascade do |t|
     t.string "email", default: "", null: false
@@ -23,8 +71,17 @@ ActiveRecord::Schema.define(version: 2022_01_03_143227) do
     t.datetime "remember_created_at"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+    t.string "username"
+    t.string "allergy"
     t.index ["email"], name: "index_users_on_email", unique: true
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end
 
+  add_foreign_key "categories", "events"
+  add_foreign_key "events", "users"
+  add_foreign_key "items", "categories"
+  add_foreign_key "items", "members"
+  add_foreign_key "members", "events"
+  add_foreign_key "members", "users"
+  add_foreign_key "suggestions", "categories"
 end
