@@ -1,13 +1,15 @@
 class SuggestionsController < ApplicationController
-def create
-  @suggestion = Suggestion.new(suggestion_params)
-  @category = Category.find(params[:category_id])
-  @suggestion.category = @category
-  @event = @category.event
-  if @suggestion.save!
-    redirect_to event_path(@event)
-  else
-    render "events/show"
+
+  def create
+    @suggestion = Suggestion.new(suggestion_params)
+    @category = Category.find(params[:category_id])
+    @suggestion.category = @category
+    @event = @category.event
+    if @suggestion.save!
+      redirect_to event_category_path
+    else
+      render "category/show"
+    end
   end
 
   def update

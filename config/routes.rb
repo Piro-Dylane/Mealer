@@ -3,7 +3,7 @@ Rails.application.routes.draw do
   root to: 'pages#home'
   resources :events do
     resources :members, only: [:create]
-    resources :categories, only: [:create] do
+    resources :categories, only: %i[show create] do
       resources :items, only: [:create]
       resources :suggestions, only: [:create]
     end
