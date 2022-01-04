@@ -4,7 +4,7 @@ class CategoriesController < ApplicationController
     @event = Event.find(params[:event_id])
     @category.event = @event
     if @category.save
-      redirect_to events_path(@event)
+      redirect_to event_path(@event)
     else
       render "events/show"
     end
