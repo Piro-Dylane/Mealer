@@ -1,4 +1,5 @@
 class SuggestionsController < ApplicationController
+
   def create
     @suggestion = Suggestion.new(suggestion_params)
     @category = Category.find(params[:category_id])
