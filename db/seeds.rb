@@ -11,7 +11,6 @@ User.create(email: "toto@gmail.fr", password: "password", username: "toto")
 
 puts "User created succesfully"
 
-Event.create(title: "Chez Ben", date: Date.current, time: Time.now, user_id: "2")
+Event.create(title: "Chez Ben", date: Date.current, time: Time.now, user_id: "1")
 
 puts "Event created successfully"
-
