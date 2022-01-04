@@ -1,4 +1,4 @@
-<%= simple_form_for([event, category, suggestion]) do |f| %>
+<%= simple_form_for ([event, category, suggestion]), html: {class: 'd-none', data: { suggestion_card_target: 'form' } } do |f| %>
   <%= f.input :name %>
   <%= f.button :submit %>
 <% end %>
