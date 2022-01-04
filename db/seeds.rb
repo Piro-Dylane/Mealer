@@ -7,10 +7,11 @@
 #   Character.create(name: 'Luke', movie: movies.first)
 
 
-User.create(email: "toto@toto.gmail.fr", password: "password", username: "toto")
+User.create(email: "toto@gmail.fr", password: "password", username: "toto")
 
 puts "User created succesfully"
 
 Event.create(title: "Chez Ben", date: Date.current, time: Time.now, user_id: "2")
 
 puts "Event created successfully"
+
