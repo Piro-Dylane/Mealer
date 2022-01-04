@@ -1,5 +1,5 @@
 class SuggestionsController < ApplicationController
-  
+
 
 def create
   @suggestion = Suggestion.new(suggestion_params)
@@ -13,11 +13,8 @@ def create
 end
 
 def update
-  if @suggestions.save
-    redirect_to suggestions_path(@suggestions)
-  else
-    render 'create'
-  end
+  @suggestion = Suggestion.find(params[:id])
+  @suggestion.update(suggestion_params)
 end
 
   private
