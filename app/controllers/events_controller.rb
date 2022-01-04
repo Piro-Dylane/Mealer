@@ -15,7 +15,7 @@ class EventsController < ApplicationController
   end
 
   def new
-     @event = Event.new
+    @event = Event.new
   end
 
   def edit
@@ -24,6 +24,9 @@ class EventsController < ApplicationController
 
   def show
     @event = Event.find(params[:id])
+    @category = Category.new
+    @suggestion = Suggestion.new
+
   end
 
   def update
