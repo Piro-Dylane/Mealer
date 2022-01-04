@@ -6,7 +6,12 @@
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
 
-user1 = User.new(email: 'toto@gmail.com', password: 'azerty', username: 'toto')
-user1.save
-event1 = Event.new(title: '2022 party', date: Date.today + 6.days, time: Time.now, description: 'this is a descritpion', user_id: '2')
-event1.save
+
+User.create(email: "toto@gmail.fr", password: "password", username: "toto")
+
+puts "User created succesfully"
+
+Event.create(title: "Chez Ben", date: Date.current, time: Time.now, user_id: "2")
+
+puts "Event created successfully"
+
