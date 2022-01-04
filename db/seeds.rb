@@ -5,12 +5,32 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
+Event.destroy_all
+User.destroy_all
 
 
-User.create(email: "toto@gmail.fr", password: "password", username: "toto")
+puts "User deleted successfully"
 
-puts "User created succesfully"
+user1 = User.create(email: "toto@gmail.fr", password: "password", username: "toto")
 
-Event.create(title: "Chez Ben", date: Date.current, time: Time.now, user_id: "1")
+puts "User 1 created succesfully"
 
-puts "Event created successfully"
+Event.create(title: "Chez Ben", date: Date.current, time: Time.now, user_id: user1.id , description:"Grosse soirée")
+
+puts "Event 1 created successfully"
+
+user2 = User.create(email: "titi@gmail.fr", password: "password", username: "titi")
+
+puts "User 2 created succesfully"
+
+Event.create(title: "Chez Claire", date: Date.current, time: Time.now, user_id: user2.id, description:"Big soirée")
+
+puts "Event 2 created successfully"
+
+user3 = User.create(email: "tata@gmail.fr", password: "password", username: "tata")
+
+puts "User 3 created succesfully"
+
+Event.create(title: "Chez Adam", date: Date.current, time: Time.now, user_id: user3.id, description:"Night party ")
+
+puts "Event 3 created successfully"

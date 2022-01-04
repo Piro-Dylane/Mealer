@@ -1,5 +1,4 @@
 class EventsController < ApplicationController
-
   def index
     @events = Event.all
   end
@@ -14,7 +13,7 @@ class EventsController < ApplicationController
   end
 
   def new
-     @event = Event.new
+    @event = Event.new
   end
 
   def edit
