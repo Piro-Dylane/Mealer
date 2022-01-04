@@ -1,0 +1,7 @@
+<div class="container">
+ <h1>Add a category</h1>
+  <%= simple_form_for([event, category]) do |f| %>
+    <%= f.input :name, collection: Category::CATEGORIES %>
+    <%= f.submit class: 'btn btn-success' %>
+  <% end %>
+</div>

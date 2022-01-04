@@ -26,13 +26,13 @@ class EventsController < ApplicationController
     @event = Event.find(params[:id])
     @category = Category.new
     @suggestion = Suggestion.new
-
+    @categories = @event.categories
   end
 
   def update
     @event = Event.find(params[:id])
     Event.update(event_params)
-    redirect_to event_path(event)
+    redirect_to event_path(@event)
   end
 
   def destroy
