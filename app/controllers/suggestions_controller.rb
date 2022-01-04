@@ -5,8 +5,9 @@ def create
   @suggestion = Suggestion.new(suggestion_params)
   @category = Category.find(params[:category_id])
   @suggestion.category = @category
-  if @suggestion.save
-    redirect_to events_path(@event)
+  @event = @category.event
+  if @suggestion.save!
+    redirect_to event_path(@event)
   else
     render "events/show"
   end

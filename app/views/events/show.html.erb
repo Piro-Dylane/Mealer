@@ -13,6 +13,14 @@
     <img src="https://kitt.lewagon.com/placeholder/users/krokrob" class="card-trip-user avatar-bordered" />
   </div>
 </div>
+<%= render "categories/category_form", event: @event, category: @category %>
 
-
-<%= render "suggestions/suggestion_form", event: @event, category: @category, suggestion: @suggestion %>
+<%if @categories %>
+  <% @categories.each do |category| %>
+    <%= category.name %>
+    <%= render "suggestions/suggestion_form", event: @event, category: category, suggestion: @suggestion %>
+    <% category.suggestions.each do |suggestion| %>
+      <%= suggestion.name %>
+    <% end %>
+  <% end %>
+<%end %>
