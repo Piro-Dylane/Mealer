@@ -5,7 +5,7 @@ class EventsController < ApplicationController
   end
 
   def create
-      @event = Event.new(event_params)
+    @event = Event.new(event_params)
     if @event.save
       redirect_to event_path(@event)
     else
@@ -15,13 +15,10 @@ class EventsController < ApplicationController
 
   def new
      @event = Event.new
-
   end
 
   def edit
-
     @event = Event.find(params[:id])
-
   end
 
   def show
@@ -47,5 +44,4 @@ class EventsController < ApplicationController
   def event_params
     params.require(:event).permit(:title, :date, :time, :description)
   end
-
 end
