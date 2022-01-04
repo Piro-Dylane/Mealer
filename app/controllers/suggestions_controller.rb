@@ -1,6 +1,4 @@
 class SuggestionsController < ApplicationController
-
-
 def create
   @suggestion = Suggestion.new(suggestion_params)
   @category = Category.find(params[:category_id])
@@ -11,17 +9,15 @@ def create
   else
     render "events/show"
   end
-end
 
-def update
-  @suggestion = Suggestion.find(params[:id])
-  @suggestion.update(suggestion_params)
-end
+  def update
+    @suggestion = Suggestion.find(params[:id])
+    @suggestion.update(suggestion_params)
+  end
 
   private
 
-def suggestion_params
-  params.require(:suggestion).permit(:name, :vote)
-end
-
+  def suggestion_params
+    params.require(:suggestion).permit(:name, :vote)
+  end
 end
