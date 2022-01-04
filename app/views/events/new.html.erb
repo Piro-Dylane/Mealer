@@ -1,1 +1,10 @@
-<h1>Hello</h1>
+<div class="container">
+ <h1>Create a new event</h1>
+  <%= simple_form_for(@event) do |f| %>
+    <%= f.input :title %>
+    <%= f.input :description %>
+    <%= f.input :date %>
+    <%= f.input :time %>
+    <%= f.submit class: 'btn btn-success' %>
+  <% end %>
+</div>
