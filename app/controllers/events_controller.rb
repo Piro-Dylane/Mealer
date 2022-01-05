@@ -24,7 +24,6 @@ class EventsController < ApplicationController
   def show
     @event = Event.find(params[:id])
     @category = Category.new
-    @suggestion = Suggestion.new
     @categories = @event.categories
     @member = Member.new
   end

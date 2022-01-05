@@ -16,6 +16,10 @@ class CategoriesController < ApplicationController
     if @category.save
       redirect_to event_path(@event)
     else
+      @category = Category.new
+      @categories = @event.categories
+      @member = Member.new
+      flash[:alert] = "#{category_params['name']} already exists for #{@event.title}."
       render "events/show"
     end
   end
