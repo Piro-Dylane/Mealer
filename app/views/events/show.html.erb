@@ -12,6 +12,11 @@
       <img src="https://kitt.lewagon.com/placeholder/users/krokrob" class="card-trip-user avatar-bordered" />
     </div>
 
+
+
+<%= render "members/member_form", event: @event, member:@member %>
+<%= console %>
+
     <div class="main-wrapper" data-controller="category-card">
           <% if @categories %>
               <div class="category-wrapper" data-category-card-target= "info">
@@ -30,3 +35,4 @@
           </div>
     </div>
 </div>
+
