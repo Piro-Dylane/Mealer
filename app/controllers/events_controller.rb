@@ -8,7 +8,11 @@ class EventsController < ApplicationController
     @event = Event.new(event_params)
     @event.user = current_user
     if @event.save
+
+      @chatroom = Chatroom.create(event_id: @event.id)
+
       @member = Member.create(user: current_user, event: @event)
+
       redirect_to event_path(@event)
     else
       render :new
