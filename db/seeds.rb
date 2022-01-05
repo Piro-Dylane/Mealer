@@ -35,5 +35,3 @@ puts "User 3 created succesfully"
 Event.create(title: "Chez Adam", date: Date.current, time: Time.now, user_id: user3.id, description:"Night party ")
 
 puts "Event 3 created successfully"
-
-Member.create(user_id: 1, event_id: 1)
