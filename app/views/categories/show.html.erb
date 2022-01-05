@@ -1,0 +1,9 @@
+<div class="suggestion-wrapper">
+    <% @category.suggestions.each do |suggestion| %>
+        <%= suggestion.name %>
+    <% end %>
+</div>
+<i class="fas fa-plus" data-suggestion-card-target= "icon" data-action="click->suggestion-card#displayFormSuggestion"></i>
+
+
+<%= render "suggestions/suggestion_form", event: @event, category: @category, suggestion: @suggestion %>
