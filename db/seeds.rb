@@ -12,17 +12,26 @@ Category.destroy_all
 Message.destroy_all
 Chatroom.destroy_all
 Event.destroy_all
+puts "Events deleted successfully"
 User.destroy_all
+puts "Users deleted successfully"
+
 
 
 
 puts "User deleted successfully"
+=======
+
 
 user1 = User.create(email: "toto@gmail.fr", password: "password", username: "toto")
 
 puts "User 1 created succesfully"
 
+
 event1 = Event.create(title: "Chez Ben", date: Date.current, time: Time.now, user_id: user1.id , description:"Grosse soirée")
+=======
+Event.create(title: "Chez Ben", date: Date.current, time: Time.now, user_id: user1.id, description: "Grosse soirée")
+
 
 puts "Event 1 created successfully"
 Chatroom.create(event_id:event1.id )

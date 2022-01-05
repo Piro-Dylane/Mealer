@@ -1,5 +1,4 @@
 
-
 <div class="card-trip col-6">
 
   <img src="https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/greece.jpg" />
@@ -16,7 +15,6 @@
 
 
 <%= render "members/member_form", event: @event, member:@member %>
-<%= console %>
 
     <div class="main-wrapper" data-controller="category-card">
           <% if @categories %>
@@ -27,6 +25,9 @@
                                     <div class="category-list">
                                         <%= link_to (event_category_path(category, event_id: category.event.id))do %>
                                             <%= category.name %>
+                                              <% category.items.each do |item| %>
+                                                  <%= item.name %> - <%=item.quantity %>
+                                              <% end %>
                                         <% end %>
                                     </div>
                                 <% end %>
@@ -36,4 +37,3 @@
           </div>
     </div>
 </div>
-
