@@ -37,3 +37,50 @@
           </div>
     </div>
 </div>
+
+
+<div class="card-wrapper col-12">
+          <div class="card">
+            <div class="card-image">
+            <img src="https://thumbs.dreamstime.com/b/friends-enjoying-house-party-friends-posing-selfie-wearing-dark-sunglasses-house-party-young-men-women-having-118513569.jpg" alt="">
+            </div>
+            <%# <div class="card-stats">
+              <div class="stat">
+                <div class="type">Accept invite</div>
+              </div>
+            </div> %>
+            <div class="card-text">
+              <span class="date"><%= @event.date %></span>
+              <h2><%= @event.title %></h2>
+              <p><%= @event.description %></p>
+            </div>
+
+        <%# <%= render "members/member_form", event: @event, member:@member %> %>
+
+            <div class="main-wrapper" data-controller="category-card">
+                    <% if @categories %>
+                        <div class="category-wrapper" data-category-card-target= "info">
+                              <%= render "categories/category_form", event: @event, category: @category %>
+                              <div class="card-hidden" data-category-card-target= "icon">
+                                          <% @categories.each do |category| %>
+                                              <div class="category-list">
+                                                  <%= link_to (event_category_path(category, event_id: category.event.id))do %>
+                                                      <%= category.name %>
+                                                      <div class="item-wrapper">
+                                                            <% category.items.each do |item| %>
+                                                                <%= item.name %> - <%=item.quantity %>
+                                                            <% end %>
+                                                      </div>
+                                                  <% end %>
+                                              </div>
+                                          <% end %>
+                                      <div class="icon-add-category">
+                                          <i class="fas fa-plus" data-category-card-target= "icon" data-action="click->category-card#displayForm"></i>
+                                      </div>
+                              </div>
+                      <% end %>
+                    </div>
+              </div>
+          </div>
+      </div>
+</div>
