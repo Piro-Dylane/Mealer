@@ -6,7 +6,7 @@ class SuggestionsController < ApplicationController
     @suggestion.category = @category
     @event = @category.event
     if @suggestion.save!
-      redirect_to event_category_path
+      redirect_to event_path(@event)
     else
       render "category/show"
     end
