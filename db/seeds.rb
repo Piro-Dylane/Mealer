@@ -20,7 +20,6 @@ puts "Users deleted successfully"
 
 
 puts "User deleted successfully"
-=======
 
 
 user1 = User.create(email: "toto@gmail.fr", password: "password", username: "toto")
@@ -29,7 +28,6 @@ puts "User 1 created succesfully"
 
 
 event1 = Event.create(title: "Chez Ben", date: Date.current, time: Time.now, user_id: user1.id , description:"Grosse soirée")
-=======
 Event.create(title: "Chez Ben", date: Date.current, time: Time.now, user_id: user1.id, description: "Grosse soirée")
 
 
