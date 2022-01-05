@@ -26,6 +26,7 @@ class EventsController < ApplicationController
     @category = Category.new
     @suggestion = Suggestion.new
     @categories = @event.categories
+    @member = Member.new
   end
 
   def update
