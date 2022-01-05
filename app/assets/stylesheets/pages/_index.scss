@@ -115,15 +115,6 @@ html {
   min-height: 100%;
 }
 
-.container {
-  display: flex;
-  position: relative;
-  margin: auto;
-  overflow: hidden;
-  width: 700px;
-  height: 250px;
-}
-
 h1 {
   font-size: 0.9em;
   font-weight: 100;
@@ -222,8 +213,8 @@ button, .dot {
     /* top: 21%; */
     /* left: 37.5%; */
     z-index: 2;
-    -webkit-animation: roll 2s ease-in-out infinite;
-    animation: roll 2s ease-in-out infinite;
+    -webkit-animation: bounce 1s ease-in infinite;
+    animation: bounce 1s ease-in infinite;
 }
 .eye {
   position: absolute;
