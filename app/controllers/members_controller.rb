@@ -9,6 +9,7 @@ class MembersController < ApplicationController
       @category = Category.new
       @categories = @event.categories
       @member = Member.new
+      @chatroom = @event.chatroom
       flash[:alert] = "You are already a member of #{@event.title}."
       render 'events/show'
     end
