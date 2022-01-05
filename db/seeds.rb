@@ -21,8 +21,6 @@ puts "Users deleted successfully"
 
 puts "User deleted successfully"
 
-
-
 user1 = User.create(email: "toto@gmail.fr", password: "password", username: "toto")
 
 puts "User 1 created succesfully"
