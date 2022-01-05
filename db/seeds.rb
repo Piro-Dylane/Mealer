@@ -6,16 +6,17 @@
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
 Event.destroy_all
+puts "Events deleted successfully"
 User.destroy_all
+puts "Users deleted successfully"
 
 
-puts "User deleted successfully"
 
 user1 = User.create(email: "toto@gmail.fr", password: "password", username: "toto")
 
 puts "User 1 created succesfully"
 
-Event.create(title: "Chez Ben", date: Date.current, time: Time.now, user_id: user1.id , description:"Grosse soirée")
+Event.create(title: "Chez Ben", date: Date.current, time: Time.now, user_id: user1.id, description: "Grosse soirée")
 
 puts "Event 1 created successfully"
 
@@ -34,3 +35,5 @@ puts "User 3 created succesfully"
 Event.create(title: "Chez Adam", date: Date.current, time: Time.now, user_id: user3.id, description:"Night party ")
 
 puts "Event 3 created successfully"
+
+Member.create(user_id: 1, event_id: 1)
