@@ -5,7 +5,7 @@ Rails.application.routes.draw do
     resources :chatrooms, only: :show do
       resources :messages, only: :create
     end
-    resources :members, only: [:create]
+    resources :members, only: [:create, :destroy]
     resources :categories, only: %i[show create] do
       resources :items, only: [:create]
       resources :suggestions, only: [:create]

@@ -14,4 +14,13 @@ class MembersController < ApplicationController
       render 'events/show'
     end
   end
+
+  def destroy
+    @event = Event.find(params[:event_id])
+    @member = Member.find_by(user: current_user.id, event: @event)
+    @member.destroy
+    if @member.destroy
+      redirect_to event_path(@event), alert: "You've just left #{@event.title}."
+    end
+  end
 end
