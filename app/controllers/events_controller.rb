@@ -1,5 +1,4 @@
 class EventsController < ApplicationController
-
   def index
     @events = Event.all
   end
@@ -38,7 +37,6 @@ class EventsController < ApplicationController
 
   def destroy
     @event = Event.find(params[:id])
-
     # destroy record
     @event.destroy
 
