@@ -1,12 +1,21 @@
+
 .footer {
-  background: #F4F4F4;
   display: flex;
+  z-index: 9999;
+  position: fixed;
   align-items: center;
-  justify-content: space-between;
-  height: 100px;
+  justify-content: space-around;
+  min-width: calc(60px-140px);
+  bottom: 0;
+  /* width: 50vh; */
+  height: 52px;
   padding: 0px 50px;
-  color: rgba(0,0,0,0.3);
+  height: calc(100vh-100px);
+  background-color: #161616;
 }
+
+
+
 .footer-links {
   display: flex;
   align-items: center;
@@ -23,4 +32,32 @@
 }
 .footer .fa-heart {
   color: #D23333;
+}
+
+.footer-home {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.footer-container a {
+  color: inherit;
+}
+
+.fa-home {
+  font-size: 20px;
+  font-weight: bold;
+  color: #ffffff
+}
+
+.fa-plus {
+  font-size: 20px;
+  font-weight: bold;
+  color: #ffffff
+}
+
+.fa-glass-cheers {
+  font-size: 20px;
+  font-weight: bold;
+  color: #ffffff
 }

@@ -1,8 +1,25 @@
 
-<div class="footer">
-  <div class="footer-links">
-    <%= link_to '', new_event_path, class: "fas fa-plus"%>
+
+
+<div class="footer col-12">
+  <div class="footer-home">
+    <%= link_to root_path do %>
+      <i class="icons fa fa-home <%= 'active' if current_page?(root_path) %>"></i>
+    <% end %>
   </div>
-  <div class="footer-copyright">
+  <div class="footer-add">
+    <%= link_to new_event_path do %>
+      <i class="icons fa fa-plus <%= 'active' if current_page?(new_event_path) %>"></i>
+    <% end %>
+  </div>
+  <div class="footer-glass">
+    <%= link_to events_path do %>
+      <i class="fas fa-glass-cheers <%= 'active' if current_page?(events_path) %>"></i>
+    <% end %>
+  </div>
+   <div class="footer-glass">
+    <%= link_to events_path do %>
+      <i class="fas fa-user <%= 'active' if current_page?(events_path) %>"></i>
+    <% end %>
   </div>
 </div>

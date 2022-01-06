@@ -29,6 +29,7 @@ class EventsController < ApplicationController
     @category = Category.new
     @categories = @event.categories
     @member = Member.new
+    @members = @event.members
     @chatroom = @event.chatroom
   end
 
@@ -44,10 +45,10 @@ class EventsController < ApplicationController
     @event.destroy
 
     # redirect to index
-    redirect_to event_path
+    redirect_to events_path
   end
 
   def event_params
-    params.require(:event).permit(:title, :date, :time, :description)
+    params.require(:event).permit(:title, :date, :time, :description, :photo)
   end
 end

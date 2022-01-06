@@ -1,2 +1,17 @@
-<h1>hello</h1>
 
+<div class="banner">
+  <div class="home-image">
+    <img src="https://i.pinimg.com/originals/70/2b/44/702b449c173736119189e8620b7fac76.gif" alt="">
+  </div>
+  <div class="container">
+    <p> Let's organize our events <strong>together</strong>!</p>
+    <p>
+      <span id="banner-typed-text"></span>
+    </p>
+    <% if user_signed_in? %>
+      <a class="btn btn-flat" href="/events/new">Create an event</a>
+    <% else %>
+      <a class="btn btn-flat" href="/users/sign_in">Sign up</a>
+    <% end %>
+  </div>
+</div>
