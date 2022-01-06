@@ -2,7 +2,6 @@ class CategoriesController < ApplicationController
   def show
     @category = Category.find(params[:id])
     @event = Event.find(params[:event_id])
-    # @event = @category.event
     @item = Item.new
     @items = @category.items
     @suggestion = Suggestion.new

@@ -45,7 +45,7 @@ class EventsController < ApplicationController
     @event.destroy
 
     # redirect to index
-    redirect_to event_path
+    redirect_to events_path
   end
 
   def event_params
