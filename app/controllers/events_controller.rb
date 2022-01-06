@@ -29,6 +29,7 @@ class EventsController < ApplicationController
     @category = Category.new
     @categories = @event.categories
     @member = Member.new
+    @members = @event.members
     @chatroom = @event.chatroom
   end
 
