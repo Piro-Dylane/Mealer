@@ -12,7 +12,51 @@ $secondary: #99DBB4;
 
 $font: 'Lato', sans-serif;
 
+
 .index-top {
+
+html {
+  display: grid;
+  min-height: 100%;
+}
+
+h1 {
+  font-size: 0.9em;
+  font-weight: 100;
+  letter-spacing: 3px;
+  padding-top: 5px;
+  color: $black;
+  padding-bottom: 5px;
+  text-transform: uppercase;
+}
+
+.green {
+  color: darken($secondary, 20%);
+}
+
+.red {
+  color: darken($error, 10%);
+}
+
+.alert {
+  font-weight: 700;
+  letter-spacing: 5px;
+}
+
+p {
+  margin-top: -5px;
+  font-size: 0.5em;
+  font-weight: 100;
+  color: darken($dark, 10%);
+  letter-spacing: 1px;
+}
+
+button, .dot {
+  cursor: pointer;
+}
+
+#success-box {
+
   position: absolute;
   top: 59px;
   min-width: 57vh;

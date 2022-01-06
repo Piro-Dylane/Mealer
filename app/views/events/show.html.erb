@@ -1,14 +1,17 @@
-
-
 <div class="card-trip col-6">
-
   <img src="https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/greece.jpg" />
     <div class="card-trip-infos">
         <div>
           <h2><%= @event.title %></h2>
           <i class="fas fa-lightbulb"></i>
           <p><%= @event.description %></p>
-          <%= link_to 'Chatroom', event_chatroom_path(@event, @chatroom) %>
+          <% if @members.include? Member.find_by(user: current_user.id, event: @event) %>
+            <%= link_to 'Chatroom', event_chatroom_path(@event, @chatroom) %>
+            <%= link_to 'Leave event', event_member_path(@event, Member.find_by(user: current_user.id)), method: :delete, class: "fas fa-trash",data: { confirm: "Are you sure you want to leave this event?" }  %>
+          <% else %>
+            <%= render "members/member_form", event: @event, member:@member %>
+          <% end %>
+
         </div>
       <h2 class="card-trip-date"><%= @event.date %></h2>
       <img src="https://kitt.lewagon.com/placeholder/users/krokrob" class="card-trip-user avatar-bordered" />
@@ -16,7 +19,7 @@
 
 
 
-<%= render "members/member_form", event: @event, member:@member %>
+
 
     <div class="main-wrapper" data-controller="category-card">
           <% if @categories %>

@@ -9,8 +9,19 @@ class MembersController < ApplicationController
       @category = Category.new
       @categories = @event.categories
       @member = Member.new
+      @chatroom = @event.chatroom
       flash[:alert] = "You are already a member of #{@event.title}."
       render 'events/show'
+      # redirect_to event_path(@event), notice: "You are already a member of #{@event.title}."
+    end
+  end
+
+  def destroy
+    @event = Event.find(params[:event_id])
+    @member = Member.find_by(user: current_user.id, event: @event)
+    @member.destroy
+    if @member.destroy
+      redirect_to event_path(@event), alert: "You've just left #{@event.title}."
     end
   end
 end
