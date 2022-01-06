@@ -12,6 +12,7 @@ class MembersController < ApplicationController
       @chatroom = @event.chatroom
       flash[:alert] = "You are already a member of #{@event.title}."
       render 'events/show'
+      # redirect_to event_path(@event), notice: "You are already a member of #{@event.title}."
     end
   end
 
