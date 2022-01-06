@@ -7,4 +7,5 @@ class Event < ApplicationRecord
   has_many :items, through: :categories
   validates :title, length: { minimum: 3, maximum: 30 }
   validates :title, :date, :time, presence: true
+  has_one_attached :photo
 end
