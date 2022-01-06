@@ -1,10 +1,11 @@
-<div class="message-container" id="message-<%= message.id %>">
-      <i class="author">
-        <span><%= message.user.username %></span>
-        <small><%= message.created_at.strftime("%a %b %e at %l:%M%p") %></small>
-        <br>
-      </i>
-      <li>
-        <strong><%= message.content %></strong>
-      </li>
+<div class="message-container" id="message md-2"-<%= message.id %>>
+  <i class="author">
+    <div class="author-event">
+     <div class="message-answer">
+        <strong> <img class ="chat-icon"src="https://img.icons8.com/color/48/000000/strawberry.png"/> <%= message.content %></strong>
     </div>
+    <p class='messageinfo'> <%= message.user.username  %><%= message.created_at.strftime(" le %e %b a: %l:%M%p") %></p>
+     </div>
+        <br>
+  </i>
+</div>
