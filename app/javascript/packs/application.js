@@ -20,7 +20,7 @@ ActiveStorage.start()
 
 // External imports
 import "bootstrap";
-
+import "controllers"
 // Internal imports, e.g:
 import { initChatroomCable } from '../channels/chatroom_channel';
 import { loadDynamicBannerText } from '../components/banner';
@@ -32,5 +32,3 @@ document.addEventListener('turbolinks:load', () => {
   // Call your functions here, e.g:
   // initSelect2();
 });
-
-import "controllers"
