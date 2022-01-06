@@ -1,7 +1,8 @@
 
 .footer {
   display: flex;
-  position: absolute;
+  z-index: 9999;
+  position: fixed;
   align-items: center;
   justify-content: space-around;
   min-width: calc(60px-140px);

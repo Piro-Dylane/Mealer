@@ -1,8 +1,8 @@
 .navbar-lewagon {
-    position: sticky;
+    z-index: 9999;
+    position: fixed;
     justify-content: space-between;
     background: #161616;
-    position: absolute;
     top: 0;
     border-bottom: 1px solid white;
     /* left: 100px; */
@@ -22,8 +22,8 @@
 
 .navbar-lewagon .navbar-brand img {
   width: 15px;
-  /* right: 1px; */
-  left: -27px;
+
+
 }
 
 .navbar-light .navbar-brand {

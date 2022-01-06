@@ -17,4 +17,9 @@
       <i class="fas fa-glass-cheers <%= 'active' if current_page?(events_path) %>"></i>
     <% end %>
   </div>
+   <div class="footer-glass">
+    <%= link_to events_path do %>
+      <i class="fas fa-user <%= 'active' if current_page?(events_path) %>"></i>
+    <% end %>
+  </div>
 </div>
