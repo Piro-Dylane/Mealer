@@ -17,7 +17,11 @@
       <div class="game col-2">
         <div class="rank"><%= event.id %></div>
       <div class="front">
-        <img src="https://picsum.photos/200/150" alt="game">
+      <% if event.photo.attached? %>
+        <%= cl_image_tag event.photo.key, height: 150, width: 200, crop: :fill %>
+      <% else %>
+         <img src="https://picsum.photos/200/150" alt="game">
+      <% end %>
         <h3 class="name"><%= event.title %></h3>
         <div class="status">
           <p class="viewers"><%= event.date %></p>
