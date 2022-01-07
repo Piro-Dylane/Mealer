@@ -28,3 +28,14 @@ html body {
   min-height: 100vh;
   position: relative;
 }
+
+
+
+#show-image  {
+  .img-event {
+    box-shadow: 1px 1px 1px black !important;
+    border-radius: 0px 0px 40px 40px !important;
+    width: 450px !important;
+    height: 250px !important;
+  }
+}
