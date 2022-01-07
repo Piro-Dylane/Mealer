@@ -17,3 +17,10 @@
 
 
     <%= render "items/item_form", event: @event, category: @category, item: @item %>
+
+
+<div class="return-arrow-category">
+    <%= link_to events_path do %>
+      <i class="fas fa-arrow-left"></i>
+    <% end %>
+</div>
