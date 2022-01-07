@@ -15,8 +15,8 @@
 
 
 .active {
- background: rgb(255,181,0);
-  background: radial-gradient(circle, rgba(255,181,0,1) 20%, rgba(22,22,22,1) 70%);
+  background: rgb(255,181,0);
+  background: radial-gradient(circle, rgba(255,181,0,1) 30%, rgba(22,22,22,1) 70%);
 }
 
 li {
@@ -27,4 +27,15 @@ html body {
   background : #000000;
   min-height: 100vh;
   position: relative;
+}
+
+
+
+#show-image  {
+  .img-event {
+    box-shadow: 1px 1px 1px black !important;
+    border-radius: 0px 0px 40px 40px !important;
+    width: 450px !important;
+    height: 250px !important;
+  }
 }

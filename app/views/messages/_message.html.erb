@@ -1,11 +1,17 @@
 <div class="message-container" id="message md-2"-<%= message.id %>>
   <i class="author">
     <div class="author-event">
-     <div class="message-answer">
-        <strong> <img class ="chat-icon"src="https://img.icons8.com/color/48/000000/strawberry.png"/> <%= message.content %></strong>
-    </div>
+
+
+      <% if @chatroom.messages.where(user: current_user).include? message%>
+          <div class="message-answer-orange">
+              <strong> <img class ="chat-icon"src="https://img.icons8.com/color/48/000000/strawberry.png"/> <%= message.content %></strong>
+          </div>
+        <% else %>
+            <div class="message-answer-blue">
+              <strong> <img class ="chat-icon"src="https://img.icons8.com/color/48/000000/strawberry.png"/> <%= message.content %></strong>
+          </div>
+      <% end %>
     <p class='messageinfo'> <%= message.user.username  %><%= message.created_at.strftime(" le %e %b a: %l:%M%p") %></p>
-     </div>
-        <br>
   </i>
 </div>

@@ -17,9 +17,13 @@
       <i class="fas fa-glass-cheers <%= 'active' if current_page?(events_path) %>"></i>
     <% end %>
   </div>
-   <div class="footer-glass">
-    <%= link_to events_path do %>
-      <i class="fas fa-user <%= 'active' if current_page?(events_path) %>"></i>
-    <% end %>
-  </div>
+  <div class="dropup">
+      <i class="fas fa-user dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"></i>
+      <div class="dropdown-menu dropdown-menu-right" aria-labelledby="dropdownMenuButton">
+        <% if user_signed_in? %>
+          <%= link_to "Log out", destroy_user_session_path, method: :delete, class: "dropdown-item" %>
+        <% else %>
+          <%= link_to "Login", new_user_session_path, class: "dropdown-item" %>
+        <% end %>
+      </div>
 </div>

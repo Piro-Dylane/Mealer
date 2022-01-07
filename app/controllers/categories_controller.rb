@@ -11,6 +11,8 @@ class CategoriesController < ApplicationController
   def create
     @category = Category.new(category_params)
     @event = Event.find(params[:event_id])
+    @members = @event.members
+    @member = Member.new
     @category.event = @event
     if @category.save
       redirect_to event_path(@event)
@@ -18,6 +20,7 @@ class CategoriesController < ApplicationController
       @category = Category.new
       @categories = @event.categories
       @member = Member.new
+      @chatroom = @event.chatroom
       flash[:alert] = "#{category_params['name']} already exists for #{@event.title}."
       render "events/show"
     end
