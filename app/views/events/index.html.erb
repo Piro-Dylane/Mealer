@@ -33,7 +33,9 @@
           <p class="game-stat">30 <span>Participating</span></p>
           <p class="game-stat">Hey<span>don't be late</span></p>
         </div>
-        <button class="btn">See event</button>
+        <%= link_to event_path(event) do %>
+          <button class="btn">See event</button>
+        <% end %>
       <div class="streamers">
         <div class="streamer">
           <div class="icon">
