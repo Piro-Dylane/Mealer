@@ -26,9 +26,9 @@ user1 = User.create(email: "toto@gmail.fr", password: "password", username: "tot
 puts "User 1 created succesfully"
 
 
-event1 = Event.create(title: "Chez Ben", date: Date.current, time: Time.now, user_id: user1.id , description:"Grosse soirée")
+event1 = Event.create(title: "Chez Dylane", date: Date.current, time: Time.now, user_id: user1.id , description:"Grosse soirée")
 
-Event.create(title: "Chez Ben", date: Date.current, time: Time.now, user_id: user1.id, description: "Grosse soirée")
+Event.create(title: "Chez Ben", date: Date.current, time: Time.now, user_id: user1.id, description: "Soirée grosse")
 
 
 puts "Event 1 created successfully"
