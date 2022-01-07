@@ -1,12 +1,16 @@
 
 <div class="suggestion-main-wrapper" data-controller="category-card">
     <div class="suggestion-wrapper">
+      <h1> Suggestions for <%= @category.name %></h1>
+      <ul>
         <% @category.suggestions.each do |suggestion| %>
+          <li>
             <%= suggestion.name %>
+          </li>
         <% end %>
+      </ul>
     </div>
-    <i class="fas fa-plus" data-category-card-target= "icon" data-action="click->category-card#displayForm"></i>
-
+    <button class="btn btn-flat" data-category-card-target= "icon" data-action="click->category-card#displayForm">Add a suggestion</button>
 
     <%= render "suggestions/suggestion_form", event: @event, category: @category, suggestion: @suggestion %>
 </div>
