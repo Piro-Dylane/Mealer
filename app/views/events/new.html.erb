@@ -1,11 +1,15 @@
 <div class="container">
- <h1>Create a new event</h1>
-  <%= simple_form_for(@event) do |f| %>
-    <%= f.input :title %>
-    <%= f.input :description %>
-    <%= f.input :date %>
-    <%= f.input :time %>
-    <%= f.input :photo, as: :file %>
-    <%= f.submit class: 'btn btn-success' %>
-  <% end %>
+ <h3>Create a new event</h3>
+ <div class="event-new">
+    <%= simple_form_for(@event) do |f|  %>
+      <%= f.input :title %>
+      <%= f.input :description %>
+      <%= f.input :date %>
+      <%= f.input :time %>
+      <%= f.input :photo, as: :file, class: "upload-photo" %>
+      <div class="container pt-5" id="create-button">
+      <%= f.button :submit, class: "btn-primary" %>
+      </div>
+    <% end %>
+ </div>
 </div>

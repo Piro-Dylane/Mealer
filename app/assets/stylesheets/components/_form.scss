@@ -1,5 +1,40 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@300;400&family=Poppins:wght@100&family=Roboto&family=Spline+Sans:wght@300&display=swap');
+
 #new_event {
-  padding: 40px;
+  padding: 10px;
   display: flex;
   flex-direction: column;
+}
+.simple_form-new-event {
+  border: 1px white;
+}
+.form-group {
+  color: #FFB500;
+  font-family: 'lato', sans-serif;
+}
+.form-control {
+  color: black;
+  font-family: 'lato', sans-serif;
+  background-color: white;
+  box-shadow: whitesmoke;
+}
+.btn-primary{
+  color: black;
+  border-radius: 14px;
+  font-family: 'lato', sans-serif;
+  background-color: white;
+
+}
+.btn-primary:hover{
+  opacity: 0.3px;
+  background-color: #f1bb30;
+}
+.upload-photo {
+  color: black;
+  background-color: #FFB500;
+}
+h3 {
+  font-family: 'lato', sans-serif;
+  font-size: xx-large;
+  color: #FFB500;
 }
