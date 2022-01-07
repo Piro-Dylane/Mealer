@@ -1,91 +1,61 @@
-<div class="card-trip col-6">
-  <img src="https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/greece.jpg" />
-    <div class="card-trip-infos">
-        <div>
-          <h2><%= @event.title %></h2>
-          <i class="fas fa-lightbulb"></i>
-          <p><%= @event.description %></p>
-          <% if @members.include? Member.find_by(user: current_user.id, event: @event) %>
-            <%= link_to 'Chatroom', event_chatroom_path(@event, @chatroom) %>
-            <%= link_to 'Leave event', event_member_path(@event, Member.find_by(user: current_user.id)), method: :delete, class: "fas fa-trash",data: { confirm: "Are you sure you want to leave this event?" }  %>
-          <% else %>
-            <%= render "members/member_form", event: @event, member:@member %>
-          <% end %>
 
-        </div>
-      <h2 class="card-trip-date"><%= @event.date %></h2>
-      <img src="https://kitt.lewagon.com/placeholder/users/krokrob" class="card-trip-user avatar-bordered" />
-    </div>
+
+<div id="show-image">
+  <img class= "img-event"src="https://media.istockphoto.com/photos/multiethnic-teenage-girls-having-fun-singing-at-slumber-party-picture-id1001424368?k=20&m=1001424368&s=612x612&w=0&h=kuN08dLx6zGb_mFwsFiV8gqjEeaEA8WUpidjxMWW4Dc=" alt="">
+</div>
+
+<div class="show-title">
+   <h1>
+      <%= @event.title %>
+   </h1>
+</div>
 
 
 
 
 
-    <div class="main-wrapper" data-controller="category-card">
-          <% if @categories %>
-              <div class="category-wrapper" data-category-card-target= "info">
-                    <%= render "categories/category_form", event: @event, category: @category %>
-                    <div class="card-hidden" data-category-card-target= "icon">
-                                <% @categories.each do |category| %>
-                                    <div class="category-list">
-                                        <%= link_to (event_category_path(category, event_id: category.event.id))do %>
-                                            <%= category.name %>
+
+<div class="main-wrapper" data-controller="category-card">
+      <% if @categories %>
+          <div class="category-wrapper" data-category-card-target= "info">
+                <%= render "categories/category_form", event: @event, category: @category %>
+                <div class="card-hidden" data-category-card-target= "icon">
+                            <% @categories.each do |category| %>
+                                <div class="category-list">
+                                    <%= link_to (event_category_path(category, event_id: category.event.id))do %>
+                                        <%= category.name %>
+                                        <div class="item-wrapper">
                                               <% category.items.each do |item| %>
                                                   <%= item.name %> - <%=item.quantity %>
                                               <% end %>
-                                        <% end %>
-                                    </div>
-                                <% end %>
-                          <i class="fas fa-plus" data-category-card-target= "icon" data-action="click->category-card#displayForm"></i>
-                     </div>
-            <% end %>
+                                        </div>
+                                    <% end %>
+                                </div>
+                            <% end %>
+                </div>
+                 <div class="icon-add-category">
+                            <i class="fas fa-plus" data-category-card-target= "icon" data-action="click->category-card#displayForm"></i>
+                        </div>
+         <% end %>
           </div>
+        </div>
+      </div>
     </div>
 </div>
 
 
-<div class="card-wrapper col-12">
-          <div class="card">
-            <div class="card-image">
-            <img src="https://thumbs.dreamstime.com/b/friends-enjoying-house-party-friends-posing-selfie-wearing-dark-sunglasses-house-party-young-men-women-having-118513569.jpg" alt="">
-            </div>
-            <%# <div class="card-stats">
-              <div class="stat">
-                <div class="type">Accept invite</div>
-              </div>
-            </div> %>
-            <div class="card-text">
-              <span class="date"><%= @event.date %></span>
-              <h2><%= @event.title %></h2>
-              <p><%= @event.description %></p>
-            </div>
 
-        <%# <%= render "members/member_form", event: @event, member:@member %> %>
 
-            <div class="main-wrapper" data-controller="category-card">
-                    <% if @categories %>
-                        <div class="category-wrapper" data-category-card-target= "info">
-                              <%= render "categories/category_form", event: @event, category: @category %>
-                              <div class="card-hidden" data-category-card-target= "icon">
-                                          <% @categories.each do |category| %>
-                                              <div class="category-list">
-                                                  <%= link_to (event_category_path(category, event_id: category.event.id))do %>
-                                                      <%= category.name %>
-                                                      <div class="item-wrapper">
-                                                            <% category.items.each do |item| %>
-                                                                <%= item.name %> - <%=item.quantity %>
-                                                            <% end %>
-                                                      </div>
-                                                  <% end %>
-                                              </div>
-                                          <% end %>
-                                      <div class="icon-add-category">
-                                          <i class="fas fa-plus" data-category-card-target= "icon" data-action="click->category-card#displayForm"></i>
-                                      </div>
-                              </div>
-                      <% end %>
-                    </div>
-              </div>
-          </div>
-      </div>
-</div>
+<% if @members.include? Member.find_by(user: current_user.id, event: @event) %>
+                <div class="chatroom-button">
+                  <%= link_to event_chatroom_path(@event, @chatroom) do  %>
+                      <i class="fas fa-comment-alt"></i>
+                  <% end %>
+                </div>
+                <div class="leave-event-wrapper">
+                  <p>Leave event</p>
+                </div>
+            <%= link_to '', event_member_path(@event, Member.find_by(user: current_user.id)), method: :delete, class: "fas fa-times",data: { confirm: "Are you sure you want to leave this event?" }  %>
+          <% else %>
+            <%= render "members/member_form", event: @event, member:@member %>
+          <% end %>
