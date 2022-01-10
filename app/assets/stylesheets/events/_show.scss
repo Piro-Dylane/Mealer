@@ -227,14 +227,13 @@
   font-weight: 800;
   border-radius: 10px;
   padding: 10px;
-  padding-right: 320px;
-  position: absolute;
   /* padding-top: 10px; */
   left: 7%;
   top: 6px;
   background-image: url("drink.png");
   background-repeat: no-repeat;
-   background-position: right;
+  background-position: right;
+  padding-right: 150px;
 }
 
 .starters-category {
@@ -244,9 +243,7 @@
   box-shadow: 1px 1px 8px black;
   font-weight: 800;
   padding: 10px;
-  position: absolute;
   border-radius: 10px;
-  padding-right: 314px;
   top: 64%;
   left: 7%;
   background-image: url("salad.png");
@@ -263,9 +260,7 @@
   font-weight: 800;
   border-radius: 10px;
   padding: 10px;
-  position: absolute;
   /* padding-top: 10px; */
-  padding-right: 296px;
   left: 28px;
   bottom: -60%;
   background-image: url("pasta.png");
@@ -282,9 +277,7 @@
   border-radius: 10px;
   padding-right: 314px;
   padding: 10px;
-  position: absolute;
   /* padding-top: 10px; */
-  padding-right: 314px;
   /* padding-top: 10px; */
   top: 177%;
   left: 7%;
@@ -305,8 +298,6 @@
   /* padding-right: 314px; */
   padding: 10px;
   /* padding-top: 10px; */
-  padding-right: 316px;
-  position: absolute;
   left: 29px;
   top: 237%;
   background-image: url("chips.png");
@@ -315,36 +306,21 @@
 }
 
 .item-drink {
-  position: absolute;
-  left: 80px;
-  top: 16px;
   font-size: 11px;
 }
 
 .item-starter {
-  position: absolute;
-  top: 67px;
-  left: 51px;
   font-size: 11px;
 }
 
 .item-main {
-  position: absolute;
-  top: 119px;
-  left: 70px;
   font-size: 11px;
 }
 
 .item-desert {
-  position: absolute;
-  top: 188%;
-  left: 13%;
   font-size: 11px;
 }
 
 .item-snack {
-  position: absolute;
-  top: 248.5%;
-  left: 13%;
   font-size: 11px;
 }
