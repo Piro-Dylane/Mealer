@@ -30,14 +30,14 @@
                 </div>
                 <div class="card-hidden" data-category-card-target= "icon">
                             <% @categories.each do |category| %>
-                                <div class="category-list">
+                                <div class="category-list m-1">
                                 <div class="category-item">
                                     <%= link_to (event_category_path(category, event_id: category.event.id))do %>
-                                    <ul>
+                                  <ul>
                                      <li>
                                         <% if category.name == "Drinks" %>
-                                          <span class= "drinks-category" > <%= category.name %> </span>
-                                            <div class="item-wrapper">
+                                        <div class="d-flex drinks-category ">
+                                          <span> <%= category.name %> </span>
                                               <ul>
                                                 <li class= "item-drink">
                                                     <% category.items.each do |item| %>
@@ -45,10 +45,10 @@
                                                     <% end %>
                                                   </li>
                                               </ul>
-                                            </div>
+                                        </div>
                                         <% elsif category.name == "Starters" %>
-                                          <span class= "starters-category" > <%= category.name %> </span>
-                                          <div class="item-starter">
+                                         <div class="d-flex starters-category ">
+                                          <span> <%= category.name %> </span>
                                                <ul>
                                                   <li class= "item-list">
                                                     <% category.items.each do |item| %>
@@ -58,8 +58,8 @@
                                               </ul>
                                             </div>
                                         <% elsif category.name == "Main dishes" %>
-                                          <span class= "main-category" > <%= category.name %> </span>
-                                          <div class="item-main">
+                                         <div class="d-flex main-category ">
+                                          <span> <%= category.name %> </span>
                                                 <ul>
                                                   <li class= "item-list">
                                                     <% category.items.each do |item| %>
@@ -69,8 +69,8 @@
                                               </ul>
                                             </div>
                                         <% elsif category.name == "Deserts" %>
-                                          <span class= "deserts-category" > <%= category.name %> </span>
-                                          <div class="item-desert">
+                                         <div class="d-flex deserts-category ">
+                                          <span> <%= category.name %> </span>
                                                 <ul>
                                                   <li class= "item-list">
                                                     <% category.items.each do |item| %>
@@ -80,8 +80,8 @@
                                               </ul>
                                             </div>
                                         <% elsif category.name == "Snacks" %>
-                                          <span class= "snacks-category" > <%= category.name %> </span>
-                                          <div class="item-snack">
+                                         <div class="d-flex snacks-category ">
+                                          <span> <%= category.name %> </span>
                                               <ul>
                                                    <li class= "item-list">
                                                     <% category.items.each do |item| %>
@@ -93,7 +93,6 @@
                                         <% end %>
                                       </li>
                                     </ul>
-
                                 </div>
                                     <% end %>
                                 </div>

@@ -19,7 +19,12 @@
   left: 0;
   grid-gap: 65px;
   top: 49%;
-  right: 0px;
+  left: -11px;
   align-content: center;
   justify-content: space-around;
+}
+
+
+.category-item li {
+  text-align: center;
 }
