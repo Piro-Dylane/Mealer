@@ -8,7 +8,11 @@ Rails.application.routes.draw do
     resources :members, only: [:create, :destroy]
     resources :categories, only: %i[show create] do
       resources :items, only: [:create]
-      resources :suggestions, only: [:create]
+      resources :suggestions, only: [:create] do
+        member do
+          patch :vote, :downvote
+        end
+      end
     end
   end
 
