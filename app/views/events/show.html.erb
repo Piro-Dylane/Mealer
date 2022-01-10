@@ -20,7 +20,11 @@
     <% end %>
 </div>
 
-
+  <%= link_to 'ROULETTE', random_event_members_path(@event), method: :patch,data: {confirm: 'random'}%>
+  <% unless @members.find_by(random: true) == nil %>
+    <%=  @members.find_by(random: true).user.username%>
+  <% end %>
+</div>
 
 <div class="main-wrapper" data-controller="category-card">
       <% if @categories %>
@@ -128,3 +132,6 @@
               <%= render "members/member_form", event: @event, member:@member %>
             </div>
           <% end %>
+
+
+<div>

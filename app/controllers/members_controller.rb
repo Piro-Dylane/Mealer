@@ -24,4 +24,12 @@ class MembersController < ApplicationController
       redirect_to event_path(@event), alert: "You've just left #{@event.title}."
     end
   end
+
+  def random
+    @event = Event.find(params[:event_id])
+    @member = @event.members.sample
+    if @member.update(random: true)
+      redirect_to event_path(@event)
+    end
+  end
 end
