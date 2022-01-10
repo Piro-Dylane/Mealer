@@ -5,7 +5,13 @@
     color: white;
     align-items: center;
     justify-content: center;
+    font-size: xx-large;
   }
+}
+
+.mt-5 {
+  position: relative;
+  height: 160px;
 }
 .message-container {
   padding: 0px;
@@ -86,6 +92,13 @@
 }
 
 .d-flex {
-  position: bottom;
-  margin: 0px;
+  margin: 2px auto;
+  position: sticky;
+  bottom: -70px;
+  padding: 20px;
+  height: 0px; 
+}
+.button-postfix {
+  background-color: black
+
 }
