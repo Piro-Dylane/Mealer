@@ -5,7 +5,7 @@ export default class extends Controller {
 
   displayForm() {
     // this.infoTarget.classList.add('d-none');
-    this.iconTarget.classList.add('d-none');
-    this.formTarget.classList.remove('d-none');
+    this.iconTarget.classList.toggle('d-none');
+    this.formTarget.classList.toggle('d-none');
   }
 }
