@@ -1,20 +1,25 @@
+.category-item {
+    flex: 0 0 30%;
+    text-align: center;
+}
+
+
 .category-list {
   border: 1px solid black;
    a {
      color: white;
      grid-gap: 10px;
      text-decoration: none;
+     font-size: 10px;
    }
 }
 
 .card-hidden {
-      position: absolute;
-    left: 0;
-    display: flex;
-    flex-direction: column;
-    grid-gap: 50px;
-    /* justify-content: space-between; */
-    flex-wrap: nowrap;
-    /* align-items: center; */
-    top: 50%;
+  position: absolute;
+  left: 0;
+  grid-gap: 65px;
+  top: 49%;
+  right: 0px;
+  align-content: center;
+  justify-content: space-around;
 }

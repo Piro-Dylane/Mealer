@@ -25,14 +25,19 @@
 
 .icon-add-category {
   .fa-plus {
-    color: grey;
-    font-size: 36px;
-    background-color: #4444;
-    padding: 20px;
-    border-radius: 10px;
+    color: #f6f6f6;
+    font-size: 19px;
+    background-color: #ffffff45;
+    padding: 11px;
+    border-radius: 50%;
     position: absolute;
-    right: 25px;
-    bottom: 35%;
+    left: 189px;
+    bottom: 52%;
+  }
+  p {
+    position: absolute;
+    bottom: 58%;
+    left: 42%;
   }
 }
 
@@ -90,4 +95,256 @@
     top: 91.5px;
     left: 22px;
   }
+}
+
+.join-event {
+  position: absolute;
+  bottom: 10%;
+}
+
+.category-form {
+  position: absolute;
+  top: 51%;
+  left: 1%;
+}
+
+
+.check-boxes {
+  position: absolute;
+  transform: scale(0);
+}
+
+
+.category-wrapper {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  flex-direction: row;
+  align-items: center;
+  justify-items: center;
+  grid-gap: 15px;
+  margin-bottom: 30px;
+}
+
+.category-item {
+  flex: 0 0 30%;
+}
+
+.category-selector {
+  position: absolute;
+  transform: scale(0);
+}
+
+.category-selector + label {
+  display: block;
+  cursor: pointer;
+  box-sizing: border-box;
+  width: 100%;
+  font-size: 12px;
+  text-align: left;
+  padding: 10px 10px 30px 10px;
+  border: 1px solid #EAEAEA;
+  border-radius: 4px;
+  background-color: white;
+}
+
+
+.category-selector:checked + label {
+  color: white !important;
+}
+
+
+#category_name_drinks + label  {
+    text-align: center;
+    background-color: #DE6B48 !important;
+    color: #ffffffbd;
+    border: 0px;
+    box-shadow: 1px 1px 8px black;
+    font-weight: 800;
+    background-image: url("drink.png");
+    background-position: top;
+    background-repeat: no-repeat;
+    padding: 20px;
+}
+
+#category_name_starters + label  {
+  background-color: #E5B181 !important;
+  color: #ffffffbc;
+  border: 0px;
+  box-shadow: 1px 1px 8px black;
+  font-weight: 800;
+  background-image: url("salad.png");
+  background-position: top;
+  background-repeat: no-repeat;
+  padding: 20px;
+  text-align: center;
+}
+
+#category_name_main_dishes + label  {
+  background-color: #F4B9B2 !important;
+  color: #ffffffbd;;
+  border: 0px;
+  box-shadow: 1px 1px 8px black;
+  font-weight: 800;
+  background-image: url("pasta.png");
+  background-position: top;
+  background-repeat: no-repeat;
+  padding: 20px;
+  text-align: center;
+}
+
+#category_name_deserts + label  {
+  background-color: #BDADEA !important;
+  color: #ffffffbd;
+  border: 0px;
+  box-shadow: 1px 1px 8px black;
+  font-weight: 800;
+  background-image: url("cake-slice.png");
+  background-position: top;
+  background-repeat: no-repeat;
+  padding: 20px;
+  text-align: center;
+}
+
+#category_name_snacks + label  {
+  background-color: #7DBBC3 !important;
+  color: #ffffffbd;
+  border: 0px;
+  box-shadow: 1px 1px 8px black;
+  font-weight: 800;
+  background-image: url("chips.png");
+  background-position: top;
+  background-repeat: no-repeat;
+  padding: 20px;
+  text-align: center;
+}
+
+.drinks-category {
+  background-color: #DE6B48 !important;
+  color: #ffffffbd;
+  border: 0px;
+  box-shadow: 1px 1px 8px black;
+  font-weight: 800;
+  border-radius: 10px;
+  padding: 10px;
+  padding-right: 320px;
+  position: absolute;
+  /* padding-top: 10px; */
+  left: 7%;
+  top: 6px;
+  background-image: url("drink.png");
+  background-repeat: no-repeat;
+   background-position: right;
+}
+
+.starters-category {
+  background-color: #E5B181 !important;
+  color: #ffffffbc;
+  border: 0px;
+  box-shadow: 1px 1px 8px black;
+  font-weight: 800;
+  padding: 10px;
+  position: absolute;
+  border-radius: 10px;
+  padding-right: 314px;
+  top: 64%;
+  left: 7%;
+  background-image: url("salad.png");
+  background-repeat: no-repeat;
+  background-position: right;
+  /* padding-top: 10px; */
+}
+
+.main-category {
+  background-color: #F4B9B2 !important;
+  color: #ffffffbd;
+  border: 0px;
+  box-shadow: 1px 1px 8px black;
+  font-weight: 800;
+  border-radius: 10px;
+  padding: 10px;
+  position: absolute;
+  /* padding-top: 10px; */
+  padding-right: 296px;
+  left: 28px;
+  bottom: -60%;
+  background-image: url("pasta.png");
+  background-repeat: no-repeat;
+  background-position: right;
+}
+
+.deserts-category {
+ background-color: #BDADEA !important;
+  color: #ffffffbd;
+  border: 0px;
+  box-shadow: 1px 1px 8px black;
+  font-weight: 800;
+  border-radius: 10px;
+  padding-right: 314px;
+  padding: 10px;
+  position: absolute;
+  /* padding-top: 10px; */
+  padding-right: 314px;
+  /* padding-top: 10px; */
+  top: 177%;
+  left: 7%;
+  background-image: url("cake-slice.png");
+  background-repeat: no-repeat;
+  background-position: right;
+}
+
+
+
+.snacks-category {
+  background-color: #7DBBC3 !important;
+  color: #ffffffbd;
+  border: 0px;
+  box-shadow: 1px 1px 8px black;
+  font-weight: 800;
+  border-radius: 10px;
+  /* padding-right: 314px; */
+  padding: 10px;
+  /* padding-top: 10px; */
+  padding-right: 316px;
+  position: absolute;
+  left: 29px;
+  top: 237%;
+  background-image: url("chips.png");
+  background-repeat: no-repeat;
+  background-position: right;
+}
+
+.item-drink {
+  position: absolute;
+  left: 80px;
+  top: 16px;
+  font-size: 11px;
+}
+
+.item-starter {
+  position: absolute;
+  top: 67px;
+  left: 51px;
+  font-size: 11px;
+}
+
+.item-main {
+  position: absolute;
+  top: 119px;
+  left: 70px;
+  font-size: 11px;
+}
+
+.item-desert {
+  position: absolute;
+  top: 188%;
+  left: 13%;
+  font-size: 11px;
+}
+
+.item-snack {
+  position: absolute;
+  top: 248.5%;
+  left: 13%;
+  font-size: 11px;
 }

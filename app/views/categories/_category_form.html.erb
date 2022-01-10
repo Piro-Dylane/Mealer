@@ -1,6 +1,14 @@
 <div class="container">
-  <%= simple_form_for ([event, category]),  html: { class: 'd-none', data: { category_card_target: 'form' } } do |f| %>
-    <%= f.input :name, collection: Category::CATEGORIES %>
-    <%= f.submit class: 'btn btn-success' %>
-  <% end %>
-</div>
+    <%= simple_form_for ([event, category]),  html: { class: 'd-none', data: { category_card_target: 'form' } } do |f| %>
+    <%= f.input :name ,
+              label: 'Add a category for your party',
+              wrapper: false,
+              as: :radio_buttons,
+              collection_wrapper_tag: 'div',
+              collection_wrapper_class: 'category-wrapper',
+              item_wrapper_class: 'category-item',
+              input_html: {class: 'category-selector'},
+              collection: Category::CATEGORIES %>
+      <%= f.submit class: 'btn btn-success' %>
+  </div>
+<% end %>
