@@ -15,10 +15,10 @@
 }
 .message-container {
   padding: 0px;
-  box-shadow: white ;
   border-radius: 45px;
   justify-content: right;
   font-family: 'lato', sans-serif;
+
 }
 .author {
   align-items: right;
@@ -86,19 +86,29 @@
 
 }
 
-
 .fa-paper-plane {
   color: rgb(245, 168, 24);
 }
 
 .d-flex {
   margin: 2px auto;
-  position: sticky;
+  position: static;
   bottom: -70px;
   padding: 20px;
-  height: 0px; 
+  height: 0px;
 }
 .button-postfix {
   background-color: black
+}
 
+
+.chat-title {
+  top: 10%;
+  position: absolute;
+  left: 27%;
+  font-size: 30px;
+}
+.test {
+  max-height: 600px;
+  overflow-y: auto;
 }
