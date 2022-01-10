@@ -3,11 +3,11 @@
     <div class="author-event">
       <% if @chatroom.messages.where(user: current_user).include? message%>
           <div class="message-answer-orange">
-              <strong> <img class ="chat-icon"src="https://img.icons8.com/color/48/000000/strawberry.png"/> <%= message.content %></strong>
+              <strong> <img class ="chat-icon-left"src="https://img.icons8.com/color/48/000000/strawberry.png"/> <%= message.content %></strong>
           </div>
         <% else %>
             <div class="message-answer-blue">
-              <strong> <img class ="chat-icon"src="https://img.icons8.com/color/48/000000/strawberry.png"/> <%= message.content %></strong>
+              <strong> <img class ="chat-icon-right"src="https://img.icons8.com/color/48/000000/strawberry.png"/> <%= message.content %></strong>
           </div>
       <% end %>
     <p class='messageinfo'> <%= message.user.username  %><%= message.created_at.strftime(" le %e %b a: %l:%M%p") %></p>
