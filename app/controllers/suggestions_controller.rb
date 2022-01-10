@@ -5,8 +5,8 @@ class SuggestionsController < ApplicationController
     @category = Category.find(params[:category_id])
     @suggestion.category = @category
     @event = @category.event
-    if @suggestion.save!
-      redirect_to event_path(@event)
+    if @suggestion.save
+      redirect_to event_category_path(@event, @category)
     else
       render "category/show"
     end
