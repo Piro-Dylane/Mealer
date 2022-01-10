@@ -21,7 +21,7 @@ puts "Users deleted successfully"
 
 puts "User deleted successfully"
 
-user1 = User.create(email: "toto@gmail.fr", password: "password", username: "Adam")
+user1 = User.create(email: "toto@gmail.fr", password: "password", username: "Adam", allergy: "coffee")
 
 puts "User 1 created succesfully"
 
@@ -36,7 +36,7 @@ Chatroom.create(event_id:event1.id )
 puts"chatroom3 creer"
 
 
-user2 = User.create(email: "titi@gmail.fr", password: "password", username: "Claire")
+user2 = User.create(email: "titi@gmail.fr", password: "password", username: "Claire", allergy: "meat")
 
 puts "User 2 created succesfully"
 
@@ -46,7 +46,7 @@ puts "Event 2 created successfully"
 Chatroom.create(event_id:event2.id )
 puts"chatroom2 creer"
 
-user3 = User.create(email: "tata@gmail.fr", password: "password", username: "Dylane")
+user3 = User.create(email: "tata@gmail.fr", password: "password", username: "Dylane", allergy: "Laure")
 
 puts "User 3 created succesfully"
 
