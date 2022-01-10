@@ -6,7 +6,10 @@
         <% @category.suggestions.each do |suggestion| %>
           <li>
             <%= suggestion.name %>
+            <%= suggestion.vote %> <%= link_to '', vote_event_category_suggestion_path(@event, @category, suggestion), method: :patch,data: {confirm: 'You have voted'},  class: "fas fa-thumbs-up text-decoration-none text-success"  %>
+            <%= suggestion.downvote %> <%= link_to '', downvote_event_category_suggestion_path(@event, @category, suggestion), method: :patch,data: {confirm: 'You have voted'},  class: "fas fa-thumbs-down text-decoration-none text-danger"  %>
           </li>
+
         <% end %>
       </ul>
     </div>
