@@ -1,4 +1,15 @@
 
+<div class="container">
+ <h1 class="mt-3">Allergies:</h1>
+  <% @category.event.members.each do |member| %>
+    <% unless member.user.allergy == nil %>
+      <div class="border border-danger m-2 rounded">
+        <%= member.user.username%> is allergic to <%= member.user.allergy %> <br>
+      </div>
+    <% end %>
+  <% end  %>
+</div>
+
 <div class="suggestion-main-wrapper" data-controller="category-card">
     <div class="suggestion-wrapper">
       <h1> Suggestions for <%= @category.name %></h1>
@@ -17,9 +28,7 @@
 
     <%= render "suggestions/suggestion_form", event: @event, category: @category, suggestion: @suggestion %>
 </div>
-
-
-    <%= render "items/item_form", event: @event, category: @category, item: @item %>
+<%= render "items/item_form", event: @event, category: @category, item: @item %>
 
 
 <div class="return-arrow-category">
