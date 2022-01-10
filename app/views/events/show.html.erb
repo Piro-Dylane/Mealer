@@ -115,17 +115,26 @@
 
 
 <% if @members.include? Member.find_by(user: current_user.id, event: @event) %>
-                <div class="chatroom-button">
-                  <%= link_to event_chatroom_path(@event, @chatroom) do  %>
-                      <i class="fas fa-comment-alt"></i>
-                  <% end %>
-                </div>
-                <div class="leave-event-wrapper">
-                  <p>Leave event</p>
-                </div>
-            <%= link_to '', event_member_path(@event, Member.find_by(user: current_user.id)), method: :delete, class: "fas fa-times",data: { confirm: "Are you sure you want to leave this event?" }  %>
-          <% else %>
-            <div class="join-event">
-              <%= render "members/member_form", event: @event, member:@member %>
-            </div>
-          <% end %>
+  <div class="chatroom-button">
+    <%= link_to event_chatroom_path(@event, @chatroom) do  %>
+      <i class="fas fa-comment-alt"></i>
+    <% end %>
+  </div>
+  <div class="leave-event-wrapper">
+    <p>Leave event</p>
+  </div>
+  <%= link_to '', event_member_path(@event, Member.find_by(user: current_user.id)), method: :delete, class: "fas fa-times",data: { confirm: "Are you sure you want to leave this event?" }  %>
+<% else %>
+  <div class="join-event">
+    <%= render "members/member_form", event: @event, member:@member %>
+  </div>
+<% end %>
+
+
+<div class="container">
+  <% @event.members.each do |member| %>
+    <%if member.user.photo.attached? %>
+      <%= cl_image_tag member.user.photo.key, class:"avatar" %>
+    <% end %>
+  <% end %>
+</div>
