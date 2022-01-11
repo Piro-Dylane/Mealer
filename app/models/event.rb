@@ -1,6 +1,6 @@
 class Event < ApplicationRecord
   belongs_to :user
-  has_many :members
+  has_many :members, dependent: :destroy
   has_many :categories, dependent: :destroy
   has_one :chatroom, dependent: :destroy
   has_many :suggestions, through: :categories, dependent: :destroy
