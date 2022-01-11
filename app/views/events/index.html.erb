@@ -20,7 +20,9 @@
             <p class="viewers"><%= event.date %></p>
             <div class="streamers">
               <% event.members[0..2].each do |member| %>
-                <%= cl_image_tag member.user.photo.key %>
+                <% if member.user.photo.attached? %>
+                  <%= cl_image_tag member.user.photo.key %>
+                <% end %>
               <% end %>
             </div>
           </div>
