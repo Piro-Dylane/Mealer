@@ -1,5 +1,6 @@
 // yarn add jquery
 import $ from 'jquery';
+
 const initRoulette = () => {
   const rouletteDiv = document.querySelector('#roulette');
   if (rouletteDiv) {
