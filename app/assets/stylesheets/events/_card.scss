@@ -55,12 +55,14 @@
 
 .card-container {
   display: flex;
-  flex-wrap: wrap;
-  grid-gap: 50px;
+  /* grid-template-columns: 1fr 1fr; */
+  grid-gap: 21px;
   position: absolute;
   top: 150px;
   width: 344px;
-  margin-top: 15px;
+  /* margin-top: 15px; */
+  flex-direction: row;
+  flex-wrap: wrap;
 }
 
 
@@ -106,19 +108,20 @@ img {
   width: 135px;
   border-radius: 15px;
   padding: 6px;
-  background: linear-gradient(9deg, rgba(0,0,0,1) 31%, rgba(253,29,29,1) 71%, rgba(252,176,69,1) 100%);
+  background: rgb(255,63,91);
+  background: linear-gradient(222deg, rgba(255,63,91,1) 0%, rgba(0,0,0,1) 56%);
 }
 .streamers{
-      display:flex;
+  display:flex;
   text-align:center;
+  margin-right: 10px;
   img{
-    width:2rem;
-    height:2rem;
+    width:1.8rem;
+    height:1.8rem;
     border-radius:50%;
   }
 }
 .front{
-  transition:200ms;
   & > img{
     border-radius:12px;
   }
@@ -126,96 +129,25 @@ img {
     margin:0.75em 0;
   }
   .status{
-        display:flex;
+    display:flex;
     justify-content:space-between;
-  align-items:center;
-}
+    align-items:center;
+  }
   .streamers img{
     border:1px solid var(--clr-dark);
     &:nth-child(1){
                  z-index:1;
- transform:translateX(15px);
+                 transform:translateX(15px);
     }
     &:nth-child(2){
       transform:translateX(10px);
     }
-
   }
 }
 
-.back{
- position:absolute;
-  top:56%;
-  left:0;
-  right:0;
-  opacity:0;
-  display:flex;
-  flex-direction:column;
-  align-items:center;
-  gap:1em;
-  .streaming-info{
-    columns:2;
-    column-rule:1px solid rgba(255,255,255,0.6);
-  }
-  .game-stat{
-    font-size:1.2rem;
-    text-align:center;
-    span{
-      display:block;
-      font-size:.8rem;
-    }
-  }
-  .streamers{
-    display:flex;
-  }
-}
-.backgroundWrapper{
-  position:absolute;
-  top:0;
-  left:0;
-  right:0;
-  bottom:0;
-  background:rgb(36, 40, 42);
-  z-index:-1;
-  transform:scale(.2,.8);
-  opacity:0;
-  border-radius:12px;
-}
-.game:hover {
-  .front{
-    transform:translateY(-25%) scale(.8);
-    .name{
-     animation:gameName 150ms forwards;
-    }
-    .status{
-      opacity:0;
-    }
-  }
-  .back{
-    opacity:1;
-    .streamers{
-      width:100%;
-      justify-content:space-between;
-    }
-    .streamer{
-      font-size:.9rem;
-    }
-    .name{
-      font-weight:bold;
-    }
-  }
-  .rank{
-    top:-35px;
-    right:-30px;
-  }
-  .backgroundWrapper{
-      transition:transform 200ms ease-in-out, opacity 100ms linear;
-    opacity:1;
-    transform:scale(1.4,1.2);
-  }
-}
 
 .rank{
+  color: white;
   position:absolute;
   right:15px;
   font-weight:bold;
@@ -248,4 +180,10 @@ img {
 
 .front img {
   object-fit: cover;
+}
+
+
+.inside-image-event {
+  display: flex;
+  justify-content: end;
 }

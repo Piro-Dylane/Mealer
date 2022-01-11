@@ -5,6 +5,22 @@
   height: 250px !important;
 }
 
+#show-image {
+  position: relative;
+}
+
+#show-icon {
+  i {
+    position: absolute;
+    bottom: 10px;
+    right: 30px;
+  }
+  .members {
+    position: absolute;
+    bottom: 10px;
+    left: 30px;
+  }
+}
 
 .show-title {
    h1 {
@@ -26,18 +42,19 @@
 .icon-add-category {
   .fa-plus {
     color: #f6f6f6;
-    font-size: 19px;
+    font-size: 11px;
     background-color: #ffffff45;
     padding: 11px;
     border-radius: 50%;
     position: absolute;
-    left: 189px;
-    bottom: 52%;
+    left: 191px;
+    bottom: 51%;
   }
   p {
     position: absolute;
-    bottom: 58%;
+    bottom: 56%;
     left: 42%;
+
   }
 }
 
@@ -323,4 +340,10 @@
 
 .item-snack {
   font-size: 11px;
+}
+
+.members {
+  display: flex;
+  flex-wrap: wrap;
+  text-align: center;
 }

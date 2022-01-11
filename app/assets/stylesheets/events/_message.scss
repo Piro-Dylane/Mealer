@@ -8,11 +8,6 @@
     font-size: xx-large;
   }
 }
-
-.mt-5 {
-  position: relative;
-  height: 160px;
-}
 .message-container {
   padding: 0px;
   border-radius: 45px;
@@ -105,5 +100,5 @@
 .test {
   max-height: 600px;
   overflow-y: auto;
-
+  position: relative;
 }

@@ -6,6 +6,18 @@
   <% else %>
     <img class= "img-event"src="https://media.istockphoto.com/photos/multiethnic-teenage-girls-having-fun-singing-at-slumber-party-picture-id1001424368?k=20&m=1001424368&s=612x612&w=0&h=kuN08dLx6zGb_mFwsFiV8gqjEeaEA8WUpidjxMWW4Dc=" alt="">
   <% end %>
+  <div id="show-icon" data-controller="members">
+    <div data-action="click->members#displayMembers">
+    <i class="fas fa-users"></i>
+    </div>
+    <div class="members d-none" data-members-target="members" >
+      <% @event.members.each do |member| %>
+        <%if member.user.photo.attached? %>
+          <%= cl_image_tag member.user.photo.key, class:"avatar" %>
+        <% end %>
+      <% end %>
+    </div>
+  </div>
 </div>
 
 <div class="show-title">
@@ -128,12 +140,3 @@
     <%= render "members/member_form", event: @event, member:@member %>
   </div>
 <% end %>
-
-
-<div class="container">
-  <% @event.members.each do |member| %>
-    <%if member.user.photo.attached? %>
-      <%= cl_image_tag member.user.photo.key, class:"avatar" %>
-    <% end %>
-  <% end %>
-</div>
