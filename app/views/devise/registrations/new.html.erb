@@ -23,6 +23,11 @@
               required: false,
               autofocus: true,
               input_html: { autocomplete: "allergy" }%>
+     <%= f.input :photo,
+              required: false,
+              as: :file,
+              class: "upload-photo",
+              input_html: { mutiple: true }%>
   </div>
 
   <div class="form-actions">
