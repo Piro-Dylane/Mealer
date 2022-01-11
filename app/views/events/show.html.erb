@@ -20,6 +20,8 @@
   </div>
 </div>
 
+   <%= link_to 'ROULETTE', roulette_event_path(@event),  class: "text-decoration-none button"  %>
+
 <div class="show-title">
    <h1>
       <%= @event.title %>
@@ -121,9 +123,6 @@
       </div>
     </div>
 </div>
-
-
-
 
 <% if @members.include? Member.find_by(user: current_user.id, event: @event) %>
   <div class="chatroom-button">

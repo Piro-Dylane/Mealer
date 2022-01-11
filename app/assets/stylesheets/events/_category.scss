@@ -37,6 +37,7 @@
 .suggestion-add-image > img {
   position: absolute;
   left: 10px;
+  z-index: 3;
   top: 280px;
 }
 

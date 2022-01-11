@@ -1,5 +1,6 @@
+<div class="background-color"></div>
 
-<div class="container">
+<div class="container ">
  <h1 class="allergy-title mt-5">Allergies:</h1>
   <% @category.event.members.each do |member| %>
     <% unless member.user.allergy == nil %>
@@ -14,6 +15,8 @@
 <div class="suggestion-add-image">
     <%= image_tag("idea.png")%>
 </div>
+
+
 
 
 <div class="suggestion-main-wrapper" data-controller="category-card">

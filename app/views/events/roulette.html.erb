@@ -1,0 +1,26 @@
+
+<div id="roulette" data-selected-index="<%= @selected_index %>" >
+  <div class="wraper">
+          <div class="arrowup"></div>
+          <div class="arrowdown"></div>
+          <div class="window">
+            <ul class="list">
+            </ul>
+            <ul class="list">
+              <% @event.members.each do |member| %>
+                <%if member.user.photo.attached? %>
+                  <li><%= cl_image_tag member.user.photo.key, class:"avatar" %></li>
+                  <% end %>
+                <% end %>
+
+            </ul>
+          </div>
+      </div>
+      <p style="text-align: center">
+          <button class="button">Spin</button>
+          <div class="win">
+              <ul>
+
+              </ul>
+          </div>
+</div>
