@@ -106,7 +106,8 @@ img {
   width: 135px;
   border-radius: 15px;
   padding: 6px;
-  background: linear-gradient(9deg, rgba(0,0,0,1) 31%, rgba(253,29,29,1) 71%, rgba(252,176,69,1) 100%);
+  background: rgb(255,63,91);
+  background: linear-gradient(222deg, rgba(255,63,91,1) 0%, rgba(0,0,0,1) 56%);
 }
 .streamers{
   display:flex;
@@ -177,4 +178,10 @@ img {
 
 .front img {
   object-fit: cover;
+}
+
+
+.inside-image-event {
+  display: flex;
+  justify-content: end;
 }

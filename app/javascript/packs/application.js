@@ -24,10 +24,12 @@ import "controllers"
 // Internal imports, e.g:
 import { initChatroomCable } from '../channels/chatroom_channel';
 import { loadDynamicBannerText } from '../components/banner';
+import { initRoulette } from '../channels/roulette';
 
 document.addEventListener('turbolinks:load', () => {
   initChatroomCable();
   loadDynamicBannerText();
+  initRoulette()
   // Call your functions here, e.g:
   // initSelect2();
 });
