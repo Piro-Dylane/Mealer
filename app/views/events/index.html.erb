@@ -1,6 +1,5 @@
 <div class="index-top">
 </div>
-
 <div class="index-header">
   <h1>Here are your upcoming events</h1>
 </div>
@@ -26,7 +25,16 @@
             </div>
           </div>
         </div>
+         <%= link_to event_path(event), :method => :delete do %>
+          <div class="inside-image-event">
+              <%= image_tag("delete.png") %>
+          </div>
+        <% end %>
       </div>
     <% end %>
   <% end %>
+</div>
+
+<div class="image-index">
+  <%= image_tag("party-time.png") %>
 </div>
