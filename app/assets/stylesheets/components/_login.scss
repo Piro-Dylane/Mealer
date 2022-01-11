@@ -1,0 +1,17 @@
+.dropdown-item {
+  text-align: center;
+  font-size: 20px;
+  font-weight: bold;
+  color: white;
+  background:#FFB500 !important;
+  transition: 0.3s ease;
+  height: 38px;
+}
+
+.dropdown-menu.dropdown-menu-right.show {
+    top: -25px !important;
+    left: 70px !important;
+    border-radius: 4px;
+    background: #FFB500;
+    color: white ;
+}
