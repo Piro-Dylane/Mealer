@@ -1,3 +1,9 @@
+<div class="return-arrow-category">
+  <%= link_to event_path(@event) do %>
+    <i class="fas fa-arrow-left"></i>
+  <% end %>
+</div>
+
   <h1 class="chat-title"><%= @chatroom.event.title %> <img class="fruit-icon" src="https://img.icons8.com/color/48/000000/hamper.png" alt="icon of a fruit basket"/> </h1>
 
 <div class="container col-8 test">
@@ -9,8 +15,6 @@
     <% end %>
     </div>
     </div>
-
-
   <%= simple_form_for [@event, @chatroom, @message ], remote: true do |f| %>
   <div class="d-flex">
        <%= f.input :content, label: false, placeholder: "Write #{@chatroom.event.title}" %>
@@ -20,10 +24,4 @@
   </div>
 <% end %>
 </div>
-</div>
-
-<div class="return-arrow-category">
-    <%= link_to event_path(@event) do %>
-      <i class="fas fa-arrow-left"></i>
-    <% end %>
 </div>

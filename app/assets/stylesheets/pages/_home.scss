@@ -2,7 +2,25 @@
 .home-image img {
   width: 370px;
   border-radius: 10px;
-  margin: 10px;
+  margin: 20px;
   padding: 18px;
   border-radius: 40px;
+}
+
+.color-background {
+  background-color: #E5B181;
+  border-radius: 240px;
+}
+
+.black-bar {
+  /* border: 1px solid white; */
+  max-width: 100wh;
+  max-height: 100vh;
+  padding: 31px;
+  top: 19%;
+  position: absolute;
+  background-color: black;
+  /* padding-right: 100vh; */
+  padding-right: 300px;
+  /* padding-top: 10px; */
 }
