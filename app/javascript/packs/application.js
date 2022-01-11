@@ -25,11 +25,9 @@ import "controllers"
 import { initChatroomCable } from '../channels/chatroom_channel';
 import { loadDynamicBannerText } from '../components/banner';
 
-
 document.addEventListener('turbolinks:load', () => {
   initChatroomCable();
   loadDynamicBannerText();
-
   // Call your functions here, e.g:
   // initSelect2();
 });
