@@ -128,12 +128,3 @@
     <%= render "members/member_form", event: @event, member:@member %>
   </div>
 <% end %>
-
-
-<div class="container">
-  <% @event.members.each do |member| %>
-    <%if member.user.photo.attached? %>
-      <%= cl_image_tag member.user.photo.key, class:"avatar" %>
-    <% end %>
-  <% end %>
-</div>

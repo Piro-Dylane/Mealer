@@ -5,64 +5,28 @@
   <h1>Here are your upcoming events</h1>
 </div>
 
-
-
-
 <div class="card-container">
-    <% @events.each do |event| %>
+  <% @events.each do |event| %>
+    <%= link_to event_path(event), class: "text-decoration-none" do %>
       <div class="game col-2">
         <div class="rank"><%= event.id %></div>
-      <div class="front">
-      <% if event.photo.attached? %>
-        <%= cl_image_tag event.photo.key, height: 90, width: 120, crop: :fill %>
-      <% else %>
-         <img src="https://picsum.photos/200/150" alt="game">
-      <% end %>
-        <h3 class="name"><%= event.title %></h3>
-        <div class="status">
-          <p class="viewers"><%= event.date %></p>
-          <div class="streamers">
-            <img src="https://randomuser.me/api/portraits/men/32.jpg" alt="">
-            <img src="https://randomuser.me/api/portraits/women/44.jpg" alt="">
-            <img src="https://images.unsplash.com/photo-1510227272981-87123e259b17?ixlib=rb-0.3.5&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=200&fit=max&s=3759e09a5b9fbe53088b23c615b6312e" alt="">
-          </div>
-        </div>
-      </div>
-      <div class="back">
-        <div class="streaming-info">
-          <p class="game-stat">30 <span>Participating</span></p>
-          <p class="game-stat">Hey<span>don't be late</span></p>
-        </div>
-        <%= link_to event_path(event) do %>
-          <button class="btn">See event</button>
-        <% end %>
-      <div class="streamers">
-        <div class="streamer">
-          <div class="icon">
-            <img src="https://randomuser.me/api/portraits/men/32.jpg" alt="">
-          </div>
-        <%  event.members.each do |member|  %>
-          <p class="name"><%= event.user.username  %></p>
-              </div>
-              <div class="streamer">
-                <div class="icon">
-                  <img src="https://randomuser.me/api/portraits/women/44.jpg" alt="">
-                </div>
-          <p class="name"> <%= event.user.username %></p>
-              </div>
-              <div class="streamer">
-                <div class="icon">
-                  <img src="https://images.unsplash.com/photo-1510227272981-87123e259b17?ixlib=rb-0.3.5&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=200&fit=max&s=3759e09a5b9fbe53088b23c615b6312e" alt="">
-                </div>
-          <p class="name"> <%= event.user.username %></p>
-                <% end %>
-              </div>
+        <div class="front" >
+          <% if event.photo.attached? %>
+            <%= cl_image_tag event.photo.key, height: 90, width: 120, crop: :fill %>
+          <% else %>
+            <img src="https://picsum.photos/200/150" alt="game">
+          <% end %>
+          <h3 class="name"><%= event.title %></h3>
+          <div class="status">
+            <p class="viewers"><%= event.date %></p>
+            <div class="streamers">
+              <% event.members[0..2].each do |member| %>
+                <%= cl_image_tag member.user.photo.key %>
+              <% end %>
             </div>
           </div>
-          <div class="backgroundWrapper"></div>
+        </div>
       </div>
     <% end %>
-
-
-
+  <% end %>
 </div>
