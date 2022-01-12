@@ -363,3 +363,14 @@
   flex-wrap: wrap;
   text-align: center;
 }
+
+.description-show-event{
+  position: absolute;
+  top: 32%;
+  /* font-size: 22px; */
+  color: #ffffff96;
+   h2 {
+      text-shadow: 1px 1px 1px black;
+      color: white;
+   }
+}
