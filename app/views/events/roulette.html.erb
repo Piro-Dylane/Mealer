@@ -23,8 +23,8 @@
               <% @event.members.each do |member| %>
                 <%if member.user.photo.attached? %>
                   <li><%= cl_image_tag member.user.photo.key, class:"avatar" %></li>
-                  <% end %>
                 <% end %>
+              <% end %>
 
             </ul>
           </div>
