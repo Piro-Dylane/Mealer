@@ -191,5 +191,7 @@ img {
 
 .inside-image-event {
   display: flex;
+  position: absolute;
   justify-content: end;
+  right: 10px;
 }
