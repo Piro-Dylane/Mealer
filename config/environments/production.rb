@@ -2,7 +2,7 @@ require "active_support/core_ext/integer/time"
 
 Rails.application.configure do
 
-  config.action_mailer.default_url_options = { host: "www.mealer-wagon.xyz" }
+  config.action_mailer.default_url_options = { host: "https://www.mealer-wagon.xyz" }
 
   config.action_mailer.delivery_method     = :postmark
 
