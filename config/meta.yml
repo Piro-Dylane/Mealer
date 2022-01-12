@@ -1,5 +1,5 @@
-meta_product_name: "Product Name"
-meta_title: "Product name - Product tagline"
-meta_description: "Relevant description"
+meta_product_name: "Mealer"
+meta_title: "Mealer - Party like you never did before"
+meta_description: "Bored of going through several apps to organize a party? Don't worry we got you!"
 meta_image: "diner.png" # should exist in `app/assets/images/`
 twitter_account: "@product_twitter_account"   # required for Twitter Cards
