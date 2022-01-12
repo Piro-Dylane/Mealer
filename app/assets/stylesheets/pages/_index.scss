@@ -33,12 +33,14 @@ html {
   letter-spacing: 5px;
 }
 
-p {
-  margin-top: -5px;
+.status p {
+  margin-top: -6px;
   font-size: 0.5em;
   font-weight: 100;
-  color: darken($dark, 10%);
+  position: absolute;
+  color: #5e5e5e;
   letter-spacing: 1px;
+  bottom: -18px;
 }
 
 button, .dot {
