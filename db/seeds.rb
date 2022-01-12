@@ -69,8 +69,7 @@ pic_georgia = URI.open('https://ca.slack-edge.com/T02NE0241-U02KTBF92QL-38f91ad0
 pic_guole = URI.open('https://ca.slack-edge.com/T02NE0241-U02KN2773MJ-e59339cdf2d5-512')
 pic_isabelle = URI.open('https://ca.slack-edge.com/T02NE0241-U02K48ZTUT1-24e5b0dd5ab6-512')
 pic_jessica = URI.open('https://ca.slack-edge.com/T02NE0241-U02KP8RSLTV-0becbbd9b32c-512')
-pic_lilia = URI.open(' https://ca.slack-edge.com/T02NE0241-U02KYH1KTKK-8e5e8627af12-512')
-pic_jessica = URI.open('https://ca.slack-edge.com/T02NE0241-U02KP8RSLTV-0becbbd9b32c-512')
+pic_lilia = URI.open('https://ca.slack-edge.com/T02NE0241-U02KYH1KTKK-8e5e8627af12-512')
 pic_lucas = URI.open('https://ca.slack-edge.com/T02NE0241-U02KXKLLTFT-445ed7b6e30d-512')
 pic_maewenn = URI.open('https://ca.slack-edge.com/T02NE0241-U02K8JY7YLF-f06ce77c6f7f-512')
 pic_laure = URI.open('https://ca.slack-edge.com/T02NE0241-U02KP2QHPL2-47c81530099c-512')
@@ -78,10 +77,7 @@ pic_sarah = URI.open('https://ca.slack-edge.com/T02NE0241-U02K73C8JHM-g15687c25d
 pic_sophiew = URI.open('https://ca.slack-edge.com/T02NE0241-U02KPK1FW1Y-b186e47fd6e6-512')
 pic_florine = URI.open('https://media-exp1.licdn.com/dms/image/C4D03AQF-Wz-dHjht0A/profile-displayphoto-shrink_200_200/0/1561457225126?e=1647475200&v=beta&t=AwX0DSTxkz-_yDfN5t06vW-h0J6jmA9qGYdBPJF8qJg')
 pic_clairew = URI.open('https://avatars.githubusercontent.com/u/91942786?v=4')
-
-
-
-
+pic_ilhem = URI.open('https://avatars.githubusercontent.com/u/92375963?v=4')
 
 julien = User.create(email: "julien@gmail.fr", password: "password", username: "Julien", allergy: "nuts")
 julien.photo.attach(io: pic_julien, filename: 'julien.png', content_type: 'image/png')
@@ -90,5 +86,68 @@ manu = User.create(email: "manu@gmail.fr", password: "password", username: "Manu
 manu.photo.attach(io: pic_manu, filename: 'manu.png', content_type: 'image/png')
 
 
+sophie = User.create(email: "sophie@gmail.fr", password: "password", username: "Sophie")
+sophie.photo.attach(io: pic_sophie, filename: 'sophie.png', content_type: 'image/png')
+
+christophe = User.create(email: "christophe@gmail.fr", password: "password", username: "Cricri")
+christophe.photo.attach(io: pic_christophe, filename: 'christophe.png', content_type: 'image/png')
+
+dylane = User.create(email: "dylane@gmail.fr", password: "password", username: "Dydy")
+dylane.photo.attach(io: pic_dylane, filename: 'dylane.png', content_type: 'image/png')
+
+loris = User.create(email: "loris@gmail.fr", password: "password", username: "Lolo")
+loris.photo.attach(io: pic_loris, filename: 'loris.png', content_type: 'image/png')
+
+adam = User.create(email: "adam@gmail.fr", password: "password", username: "Adam")
+adam.photo.attach(io: pic_adam, filename: 'adam.png', content_type: 'image/png')
+
+clairem = User.create(email: "claire@gmail.fr", password: "password", username: "Claire")
+clairem.photo.attach(io: pic_clairem, filename: 'claire.png', content_type: 'image/png')
+
 aurelie = User.create(email: "aurelie@gmail.fr", password: "password", username: "Aurélie")
 aurelie.photo.attach(io: pic_aurelie, filename: 'aurelie.png', content_type: 'image/png')
+
+emilie = User.create(email: "emilie@gmail.fr", password: "password", username: "Emilie")
+emilie.photo.attach(io: pic_emilie, filename: 'emilie.png', content_type: 'image/png')
+
+erika = User.create(email: "erika@gmail.fr", password: "password", username: "Erika")
+erika.photo.attach(io: pic_erika, filename: 'erika.png', content_type: 'image/png')
+
+georgia = User.create(email: "georgia@gmail.fr", password: "password", username: "Georgia")
+georgia.photo.attach(io: pic_georgia, filename: 'georgia.png', content_type: 'image/png')
+
+guole = User.create(email: "guole@gmail.fr", password: "password", username: "Lele")
+guole.photo.attach(io: pic_guole, filename: 'guole.png', content_type: 'image/png')
+
+isabelle = User.create(email: "isabelle@gmail.fr", password: "password", username: "Isabelle")
+isabelle.photo.attach(io: pic_isabelle, filename: 'Isabelle.png', content_type: 'image/png')
+
+jessica = User.create(email: "jessica@gmail.fr", password: "password", username: "Jess")
+jessica.photo.attach(io: pic_jessica, filename: 'jessica.png', content_type: 'image/png')
+
+lilia = User.create(email: "lilia@gmail.fr", password: "password", username: "Lilia")
+lilia.photo.attach(io: pic_lilia, filename: 'lilia.png', content_type: 'image/png')
+
+lucas = User.create(email: "lucas@gmail.fr", password: "password", username: "Lucas")
+lucas.photo.attach(io: pic_lucas, filename: 'lucas.png', content_type: 'image/png')
+
+maewenn = User.create(email: "maewenn@gmail.fr", password: "password", username: "Maewenn")
+maewenn.photo.attach(io: pic_maewenn, filename: 'maewenn.png', content_type: 'image/png')
+
+laure = User.create(email: "laure@gmail.fr", password: "password", username: "Laure")
+laure.photo.attach(io: pic_laure, filename: 'laure.png', content_type: 'image/png')
+
+sarah = User.create(email: "sarah@gmail.fr", password: "password", username: "Lucas")
+sarah.photo.attach(io: pic_sarah, filename: 'sarah.png', content_type: 'image/png')
+
+sophiew = User.create(email: "sosophie@gmail.fr", password: "password", username: "Sophie")
+sophiew.photo.attach(io: pic_sophiew, filename: 'sophiew.png', content_type: 'image/png')
+
+florine = User.create(email: "florine@gmail.fr", password: "password", username: "Floflo")
+florine.photo.attach(io: pic_florine, filename: 'lucas.png', content_type: 'image/png')
+
+clairew = User.create(email: "claireclaire@gmail.fr", password: "password", username: "Claire")
+clairew.photo.attach(io: pic_clairew, filename: 'clairew.png', content_type: 'image/png')
+
+ilhem = User.create(email: "ilhem@gmail.fr", password: "password", username: "Lucas")
+ilhem.photo.attach(io: pic_ilhem, filename: 'ilhem.png', content_type: 'image/png')
