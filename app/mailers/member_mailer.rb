@@ -7,6 +7,7 @@ class MemberMailer < ApplicationMailer
   #
   def send_welcomeevent_email
    @user = params[:user]
+   @event = params[:event]
     mail(to: @user.email, subject: 'Welcome to events')
   end
 end

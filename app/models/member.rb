@@ -8,6 +8,6 @@ class Member < ApplicationRecord
   private
 
   def send_welcomeevent_email
-    MemberMailer.with(user: self.user).send_welcomeevent_email.deliver_now
+    MemberMailer.with(user: self.user, event: self.event).send_welcomeevent_email.deliver_now
   end
 end
