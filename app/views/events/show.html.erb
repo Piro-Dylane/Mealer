@@ -20,7 +20,6 @@
   </div>
 </div>
 
-   <%= link_to 'ROULETTE', roulette_event_path(@event),  class: "text-decoration-none button"  %>
 
 <div class="show-title">
    <h1>
@@ -128,6 +127,9 @@
   <div class="chatroom-button">
     <%= link_to event_chatroom_path(@event, @chatroom) do  %>
       <i class="fas fa-comment-alt"></i>
+    <% end %>
+   <%= link_to roulette_event_path(@event), class: "img-roulette" do %>
+      <%= image_tag("roulette.png") %>
     <% end %>
   </div>
   <div class="leave-event-wrapper">
