@@ -7,7 +7,7 @@
   justify-content: space-around;
   min-width: calc(60px-140px);
   bottom: 0;
-  left: 0; 
+  left: 0;
   /* width: 50vh; */
   height: 52px;
   padding: 0px 50px;
@@ -61,4 +61,7 @@
   font-size: 20px;
   font-weight: bold;
   color: #ffffff
+}
+.dropdown-menu {
+  background: #FFB500;
 }
