@@ -2,6 +2,9 @@ Rails.application.routes.draw do
   devise_for :users, controllers: {registrations: "users/registrations" }
   root to: 'pages#home'
   resources :events do
+    member do
+      get :roulette
+    end
     resources :chatrooms, only: :show do
       resources :messages, only: :create
     end

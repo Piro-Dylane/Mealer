@@ -50,7 +50,16 @@ class EventsController < ApplicationController
     redirect_to events_path
   end
 
+  def roulette
+    console
+    @event = Event.find(params[:id])
+    @members = @event.members
+    @event.sam_id = @members.sample.id
+    @selected_index = @event.members.index { |member| member.id == @event.sam_id}
+    @event.save
+  end
+
   def event_params
-    params.require(:event).permit(:title, :date, :time, :description, :photo)
+    params.require(:event).permit(:title, :date, :time, :description, :photo, :sam_id)
   end
 end

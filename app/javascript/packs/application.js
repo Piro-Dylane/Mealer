@@ -24,7 +24,7 @@ import "controllers"
 // Internal imports, e.g:
 import { initChatroomCable } from '../channels/chatroom_channel';
 import { loadDynamicBannerText } from '../components/banner';
-import { initRoulette } from '../channels/roulette';
+import { initRoulette } from '../components/roulette';
 
 document.addEventListener('turbolinks:load', () => {
   initChatroomCable();

@@ -182,6 +182,12 @@ img {
   object-fit: cover;
 }
 
+.front .streamers img {
+  border: 1px solid var(--clr-dark);
+  position: absolute;
+  left: 0;
+  bottom: 0;
+}
 
 .inside-image-event {
   display: flex;
