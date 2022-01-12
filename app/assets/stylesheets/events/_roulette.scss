@@ -1,6 +1,11 @@
+#roulette {
+      position: absolute;
+}
+
 #roulette * {
     padding: 0;
     margin: 0;
+
 }
 li {
     list-style: none;
@@ -34,8 +39,48 @@ li {
 
 .list li {
 border: 4px solid transparent ;
+
 }
 .list li img {
     width: 130px;
     height: 130px;
   }
+
+#roulette h2 {
+    font-size: 28px;
+    text-align: center;
+    strong {
+          color: #ffa606;
+      }
+}
+
+
+#roulette .button {
+    text-decoration: none;
+    background-color: black;
+    border: 1px black;
+    color: white;
+    font-family: 'Font Awesome 5 Free';
+    font-size: 28px;
+    margin-bottom: 20px;
+}
+
+.return-arrow-chatroom {
+    position: absolute;
+    top: 13%;
+    left: 29px;
+    font-size: 20px;
+
+
+    .fa-arrow-left {
+      color: white;
+      text-decoration: none;
+    }
+}
+
+
+.spin-image img {
+  position: absolute;
+  width: 50px;
+  left: 44%;
+}

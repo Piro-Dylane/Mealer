@@ -1,5 +1,18 @@
+<div class="return-arrow-chatroom">
+  <%= link_to event_path(@event) do %>
+    <i class="fas fa-arrow-left"></i>
+  <% end %>
+</div>
+
+<div class="spin-image">
+  <img src="https://media4.giphy.com/media/2fNJsREcSgLZnumrAX/giphy.gif" alt="">
+</div>
 
 <div id="roulette" data-selected-index="<%= @selected_index %>" >
+    <h2>Who's going to be <strong> Sam? </strong> </h2>
+   <p style="text-align: center">
+          <button class="button"> <em> Spin </em> </button>
+          <div class="win">
   <div class="wraper">
           <div class="arrowup"></div>
           <div class="arrowdown"></div>
@@ -16,11 +29,10 @@
             </ul>
           </div>
       </div>
-      <p style="text-align: center">
-          <button class="button">Spin</button>
-          <div class="win">
               <ul>
 
               </ul>
           </div>
 </div>
+
+<h3>Looks like <%= @event.user.username %> isn't drinking </h3>

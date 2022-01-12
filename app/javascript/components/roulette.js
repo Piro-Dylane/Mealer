@@ -32,7 +32,8 @@ const initRoulette = () => {
         // var selectedRank = 10 *  elementsCount + selectedIndex
 
         $('.list li:eq(' + selectedRank + ')').css({
-          border: '4px solid #00ba00'
+          border: '4px solid #ffa606',
+          borderRadius: '50%'
         })
         $('.window').animate({
           right: ((selectedRank * 130) + (selectedRank * 8 - 12) - 119)
