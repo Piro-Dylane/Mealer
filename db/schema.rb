@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2022_01_10_092213) do
+ActiveRecord::Schema.define(version: 2022_01_11_160958) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -66,6 +66,7 @@ ActiveRecord::Schema.define(version: 2022_01_10_092213) do
     t.bigint "user_id", null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+    t.integer "sam_id"
     t.index ["user_id"], name: "index_events_on_user_id"
   end
 
@@ -99,6 +100,13 @@ ActiveRecord::Schema.define(version: 2022_01_10_092213) do
     t.index ["user_id"], name: "index_messages_on_user_id"
   end
 
+  create_table "newsletters", force: :cascade do |t|
+    t.string "name"
+    t.string "email"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+  end
+
   create_table "suggestions", force: :cascade do |t|
     t.string "name"
     t.integer "vote", default: 0
@@ -107,6 +115,17 @@ ActiveRecord::Schema.define(version: 2022_01_10_092213) do
     t.datetime "updated_at", precision: 6, null: false
     t.integer "downvote", default: 0
     t.index ["category_id"], name: "index_suggestions_on_category_id"
+  end
+
+  create_table "user_mailers", force: :cascade do |t|
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+  end
+
+  create_table "usermailers", force: :cascade do |t|
+    t.string "approved"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
   end
 
   create_table "users", force: :cascade do |t|
@@ -119,6 +138,10 @@ ActiveRecord::Schema.define(version: 2022_01_10_092213) do
     t.datetime "updated_at", precision: 6, null: false
     t.string "username"
     t.string "allergy"
+    t.string "confirmation_token"
+    t.datetime "confirmed_at"
+    t.datetime "confirmation_sent_at"
+    t.index ["confirmation_token"], name: "index_users_on_confirmation_token", unique: true
     t.index ["email"], name: "index_users_on_email", unique: true
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end

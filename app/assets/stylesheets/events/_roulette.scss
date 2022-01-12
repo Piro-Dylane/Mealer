@@ -1,0 +1,106 @@
+#roulette {
+      position: absolute;
+}
+
+#roulette * {
+    padding: 0;
+    margin: 0;
+
+}
+li {
+    list-style: none;
+    display: inline-block;
+    float: left;
+}
+
+.window {
+    overflow: hidden;
+    position: relative;
+    width: 25000px;
+    height: 143px;
+    right: 0px;
+}
+
+.wraper {
+    position: relative;
+    margin: auto;
+    margin-top: 250px;
+    width: 408px;
+    overflow-x: hidden;
+    overflow-y: hidden;
+    border-radius: 2px;
+}
+
+.list {
+    position: relative;
+    margin-left: 230;
+    display: inline-block;
+}
+
+.list li {
+border: 4px solid transparent ;
+
+}
+.list li img {
+    width: 130px;
+    height: 130px;
+  }
+
+#roulette h2 {
+    font-size: 28px;
+    text-align: center;
+    strong {
+          color: #ffa606;
+      }
+}
+
+
+#roulette .button {
+    text-decoration: none;
+    background-color: black;
+    border: 1px black;
+    color: white;
+    font-family: 'Font Awesome 5 Free';
+    font-size: 28px;
+    margin-bottom: 20px;
+}
+
+.return-arrow-chatroom {
+    position: absolute;
+    top: 13%;
+    left: 29px;
+    font-size: 20px;
+
+
+    .fa-arrow-left {
+      color: white;
+      text-decoration: none;
+    }
+}
+
+
+.spin-image img {
+  position: absolute;
+  width: 50px;
+  left: 44%;
+  top: 21%;
+
+}
+
+#roulette {
+  .loser {
+    position: absolute;
+    left: 18%;
+    top: 116%;
+    font-size: 20px;
+  }
+  strong {
+    color: #00A8E8;
+  }
+}
+
+   .win .d-none img{
+    position: absolute;
+    top: 160%;
+    left: -50px;
+  }

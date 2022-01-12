@@ -1,0 +1,38 @@
+<div class="return-arrow-chatroom">
+  <%= link_to event_path(@event) do %>
+    <i class="fas fa-arrow-left"></i>
+  <% end %>
+</div>
+
+<div class="spin-image">
+  <img src="https://media4.giphy.com/media/2fNJsREcSgLZnumrAX/giphy.gif" alt="">
+</div>
+
+<div id="roulette" data-controller= "roulette" data-selected-index="<%= @selected_index %> " >
+    <h2>Who's going to be <strong> Sam? </strong> </h2>
+   <p style="text-align: center">
+          <button class="button" data-action= "click->roulette#displayName" > <em> Spin </em> </button>
+          <div class="win">
+         <img src="https://media2.giphy.com/media/peAFQfg7Ol6IE/200.gif" class= "d-none" data-roulette-target= "name" alt="">
+  <div class="wraper">
+          <div class="arrowup"></div>
+          <div class="arrowdown"></div>
+          <div class="window">
+            <ul class="list">
+            </ul>
+            <ul class="list">
+              <% @event.members.each do |member| %>
+                <%if member.user.photo.attached? %>
+                  <li><%= cl_image_tag member.user.photo.key, class:"avatar" %></li>
+                  <% end %>
+                <% end %>
+
+            </ul>
+          </div>
+      </div>
+              <ul>
+
+              </ul>
+          </div>
+      <h3 class= "loser d-none" data-roulette-target= "name" >Looks like <strong><%= @members.find_by(id: @event.sam_id).user.username %> </strong> isn't drinking </h3>
+</div>

@@ -20,7 +20,7 @@
   width: 100%;
   grid-gap: 65px;
   top: 49%;
-  left: -11px;
+  left: -18px;
   align-content: center;
   justify-content: space-around;
 }
@@ -39,6 +39,7 @@
 .suggestion-add-image > img {
   position: absolute;
   left: 10px;
+  z-index: 3;
   top: 280px;
 }
 
