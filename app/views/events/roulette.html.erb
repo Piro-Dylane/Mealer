@@ -35,4 +35,5 @@
           </div>
 </div>
 
-<h3>Looks like <%= @event.user.username %> isn't drinking </h3>
+
+  <h3>Looks like <%= @members.find_by(id: @event.sam_id).user.username %> isn't drinking </h3>
