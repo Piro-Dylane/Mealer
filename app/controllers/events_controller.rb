@@ -51,7 +51,6 @@ class EventsController < ApplicationController
   end
 
   def roulette
-    console
     @event = Event.find(params[:id])
     @members = @event.members
     @event.sam_id = @members.sample.id
