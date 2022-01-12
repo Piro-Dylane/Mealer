@@ -8,10 +8,10 @@
   <img src="https://media4.giphy.com/media/2fNJsREcSgLZnumrAX/giphy.gif" alt="">
 </div>
 
-<div id="roulette" data-selected-index="<%= @selected_index %>" >
+<div id="roulette" data-controller= "roulette" data-selected-index="<%= @selected_index %> " >
     <h2>Who's going to be <strong> Sam? </strong> </h2>
    <p style="text-align: center">
-          <button class="button"> <em> Spin </em> </button>
+          <button class="button" data-action= "click->roulette#displayName" > <em> Spin </em> </button>
           <div class="win">
   <div class="wraper">
           <div class="arrowup"></div>
@@ -33,6 +33,5 @@
 
               </ul>
           </div>
+      <h3 class= "loser d-none" data-roulette-target= "name" >Looks like <strong><%= @members.find_by(id: @event.sam_id).user.username %> </strong> isn't drinking </h3>
 </div>
-
-<h3>Looks like <%= @event.user.username %> isn't drinking </h3>
