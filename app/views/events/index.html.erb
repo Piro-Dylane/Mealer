@@ -8,7 +8,7 @@
   <% @events.each do |event| %>
     <%= link_to event_path(event), class: "text-decoration-none" do %>
       <div class="game col-2">
-        <div class="rank"><%= event.id %></div>
+        <div class="rank"></div>
         <div class="front" >
           <% if event.photo.attached? %>
             <%= cl_image_tag event.photo.key, height: 90, width: 120, crop: :fill %>
