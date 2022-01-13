@@ -78,12 +78,16 @@ pic_sophiew = URI.open('https://ca.slack-edge.com/T02NE0241-U02KPK1FW1Y-b186e47f
 pic_florine = URI.open('https://media-exp1.licdn.com/dms/image/C4D03AQF-Wz-dHjht0A/profile-displayphoto-shrink_200_200/0/1561457225126?e=1647475200&v=beta&t=AwX0DSTxkz-_yDfN5t06vW-h0J6jmA9qGYdBPJF8qJg')
 pic_clairew = URI.open('https://avatars.githubusercontent.com/u/91942786?v=4')
 pic_ilhem = URI.open('https://avatars.githubusercontent.com/u/92375963?v=4')
+pic_ben = URI.open('https://lewagon-alumni.slack.com/files/U02KL3AGVU5/F02UK31D8QY/photogit.png')
 
 julien = User.create(email: "julien@gmail.fr", password: "password", username: "Julien", allergy: "nuts")
 julien.photo.attach(io: pic_julien, filename: 'julien.png', content_type: 'image/png')
 
 manu = User.create(email: "manu@gmail.fr", password: "password", username: "Manu")
 manu.photo.attach(io: pic_manu, filename: 'manu.png', content_type: 'image/png')
+
+ben = User.create(email: "ben@gmail.fr", password: "password", username: "Benji")
+ben.photo.attach(io: pic_ben, filename: 'ben.png', content_type: 'image/png')
 
 
 sophie = User.create(email: "sophie@gmail.fr", password: "password", username: "Sophie")
