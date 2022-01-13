@@ -27,8 +27,8 @@
             </div>
           </div>
         </div>
-        <% if event.user == current_user %>
-         <%= link_to event_path(event), :method => :delete do %>
+        <%= link_to event_path(event), :method => :delete do %>
+          <% if event.user == current_user  %>
             <div class="inside-image-event">
               <%= image_tag("delete.png") %>
             </div>

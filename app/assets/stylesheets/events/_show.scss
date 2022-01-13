@@ -12,9 +12,11 @@
 #show-icon {
   i {
     position: absolute;
-    bottom: 10px;
-    right: 30px;
+    bottom: 212px;
+    right: 12px;
     z-index: 1;
+    font-size: 26px;
+}
   }
   .members {
     position: absolute;
@@ -23,7 +25,7 @@
     padding: 10px;
     align-items: center;
     }
-  }
+
 
 .show-title {
    h1 {
@@ -371,8 +373,8 @@
 
 .description-show-event{
     position: absolute;
-    top: 89%;
-    left: 26%;
+    top: 83%;
+    left: 43%;
     /* font-size: 51px; */
     color: #ffffff96;
    h2 {
