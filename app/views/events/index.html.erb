@@ -17,7 +17,7 @@
           <% end %>
           <h3 class="name"><%= event.title %></h3>
           <div class="status">
-            <p class="viewers"><%= event.date %></p>
+            <p class="viewers"><%= event.date %> @<%=  event.time.strftime("%Hh%M") %></p>
             <div class="streamers">
               <% event.members[0..2].each do |member| %>
                 <% if member.user.photo.attached? %>

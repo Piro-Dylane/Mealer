@@ -11,7 +11,7 @@ const initRoulette = () => {
     const elementsCount = document.querySelectorAll(".list li").length;
     // console.log(elementsCount);
 
-    for (let i = 0; i < 3; i++) {
+    for (let i = 0; i < 2; i++) {
       $(".list li").clone().appendTo(".list");
     }
 
@@ -31,13 +31,14 @@ const initRoulette = () => {
         }
         // var selectedRank = 10 *  elementsCount + selectedIndex
 
+        $('.window').animate({
+          right: ((selectedRank * 130) + (selectedRank * 8 - 12) - 119)
+        }, 3000);
+
         $('.list li:eq(' + selectedRank + ')').css({
           border: '4px solid #ffa606',
           borderRadius: '50%'
         })
-        $('.window').animate({
-          right: ((selectedRank * 130) + (selectedRank * 8 - 12) - 119)
-        }, 3000);
       });
   };
 }
