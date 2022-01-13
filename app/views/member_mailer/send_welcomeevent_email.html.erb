@@ -1,9 +1,42 @@
-  <h1>Welcome to event, <%= @user.username %></h1>
-    <p>
-      You have successfully signed up to example.com,
+  <!DOCTYPE html>
+    <html>
+      <head>
+        <style type="text/css">
+          body{
+            font-size:18px;
+            background-color:black;
+            color:white;
+            text-align:center;
 
-    </p>
-    <p>
-      To login to the site, just follow this link: <%= link_to 'return au site', event_url(@event) %>.
-    </p>
-    <p>Thanks for joining and have a great day!</p>
+
+          }
+            .boutonmailer {
+             color: white;
+              padding: 8px 24px;
+              border-radius: 15px;
+              background: #ffb500;
+              font-weight: 600;
+              margin-top: 10px;
+              transition: 0.3s ease;
+              text-decoration:none;
+          }
+
+        </style>
+      </head>
+  <body>
+
+    <h1>Welcome <%= @user.username %> to event: <%= @event.title %></h1>
+      <p>
+        You have successfully signed up to <%= @user.email %>,
+
+      <p>Thanks for joining and have a great day!</p>
+      </p>
+      <p>
+
+        To return to the event, just follow this link: <%= link_to 'Return to event', event_url(@event), class:'boutonmailer' %>.
+
+      </p>
+      <img src="https://media.giphy.com/media/blSTtZehjAZ8I/giphy.gif" alt="gamin qui danse">
+
+  </body>
+</html>
