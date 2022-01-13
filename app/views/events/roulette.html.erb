@@ -11,9 +11,16 @@
    <p style="text-align: center">
           <button class="button" data-action= "click->roulette#displayName" > <em> Spin </em> </button>
           <div class="win">
+<<<<<<< HEAD
           <div class="firework">
             <img src="https://media2.giphy.com/media/peAFQfg7Ol6IE/200.gif" class= "d-none" data-roulette-target= "firework" alt="">
           </div>
+=======
+         <img src="https://media2.giphy.com/media/peAFQfg7Ol6IE/200.gif" class= "firework d-none" data-roulette-target= "firework" alt="">
+         <img src="https://media2.giphy.com/media/peAFQfg7Ol6IE/200.gif" class= "firework2 d-none" data-roulette-target= "firework" alt="">
+         <img src="https://media2.giphy.com/media/peAFQfg7Ol6IE/200.gif" class= "firework3 d-none" data-roulette-target= "firework" alt="">
+         <img src="https://media2.giphy.com/media/peAFQfg7Ol6IE/200.gif" class= "firework4 d-none" data-roulette-target= "firework" alt="">
+>>>>>>> 8b6d76486a1af1356eb99e9ad13afecc710ecdd3
   <div class="wraper">
           <div class="arrowup"></div>
           <div class="arrowdown"></div>
@@ -24,8 +31,13 @@
               <% @event.members.each do |member| %>
                 <%if member.user.photo.attached? %>
                   <li><%= cl_image_tag member.user.photo.key, class:"avatar" %></li>
+                  <% end %>
                 <% end %>
+<<<<<<< HEAD
               <% end %>
+=======
+
+>>>>>>> 8b6d76486a1af1356eb99e9ad13afecc710ecdd3
             </ul>
           </div>
       </div>
