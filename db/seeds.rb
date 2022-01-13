@@ -46,7 +46,7 @@ pic_clairew = URI.open('https://avatars.githubusercontent.com/u/91942786?v=4')
 pic_ilhem = URI.open('https://avatars.githubusercontent.com/u/92375963?v=4')
 pic_ben = File.open('app/assets/images/ben.png')
 
-julien = User.create(email: "julien@gmail.fr", password: "password", username: "Julien", allergy: "nuts")
+julien = User.create(email: "julien@gmail.fr", password: "password", username: "Julien", allergy: "Nuts")
 julien.photo.attach(io: pic_julien, filename: 'julien.png', content_type: 'image/png')
 
 manu = User.create(email: "manu@gmail.fr", password: "password", username: "Manu")
@@ -67,7 +67,7 @@ dylane.photo.attach(io: pic_dylane, filename: 'dylane.png', content_type: 'image
 loris = User.create(email: "loris@gmail.fr", password: "password", username: "Lolo")
 loris.photo.attach(io: pic_loris, filename: 'loris.png', content_type: 'image/png')
 
-adam = User.create(email: "adam@gmail.fr", password: "password", username: "Adam", allergy: "coffee")
+adam = User.create(email: "adam@gmail.fr", password: "password", username: "Adam", allergy: "Coffee")
 adam.photo.attach(io: pic_adam, filename: 'adam.png', content_type: 'image/png')
 
 clairem = User.create(email: "claire@gmail.fr", password: "password", username: "Claire")
