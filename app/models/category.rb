@@ -1,5 +1,5 @@
 class Category < ApplicationRecord
-  CATEGORIES = ["Drinks", "Starters", "Main dishes", "Deserts", "Snacks"]
+  CATEGORIES = ["Drinks", "Starters", "Dishes", "Deserts", "Snacks"]
 
   belongs_to :event
   has_many :suggestions, dependent: :destroy
