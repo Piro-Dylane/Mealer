@@ -155,32 +155,44 @@ Member.create(user: laure, event: wagon_party)
 
 puts "Wagon event (members and chatroom) created succesfully"
 
-file = URI.open('https://randomuser.me/api/portraits/men/32.jpg')
 
 event1 = Event.create(title: "British party", date: Date.current, time: Time.now, user_id: adam.id, description: "Let's party london style")
-# event1.photo.attach(io: , filename: 'event1.png', content_type: 'image/png')
+pic_event1 = URI.open('https://static1.purepeople.com/articles/7/21/72/77/@/2954366-la-reine-elizabeth-ii-posant-avec-les-ga-950x0-3.jpg')
+event1.photo.attach(io: pic_event1, filename: 'event1.png', content_type: 'image/png')
 Chatroom.create(event_id: event1.id)
 Member.create(user: adam, event: event1)
 Member.create(user: erika, event: event1)
 Member.create(user: lucas, event: event1)
+Member.create(user: clairem, event: event1)
 puts "Event 1 (members and chatroom) created successfully"
 
 event2 = Event.create(title: "Kebab night", date: Date.current + 30, time: Time.now, user_id: ben.id, description: "Dégustation des meilleurs kebabs de Marseille")
+pic_event2 = URI.open('https://assets.afcdn.com/recipe/20210304/118354_w1200h911c1cx1060cy707cxb2121cyb1414.webp')
+event2.photo.attach(io: pic_event2, filename: 'event2.png', content_type: 'image/png')
 Chatroom.create(event_id: event2.id)
 Member.create(user: ben, event: event2)
 Member.create(user: christophe, event: event2)
 Member.create(user: julien, event: event2)
 Member.create(user: sophiew, event: event2)
+Member.create(user: clairem, event: event2)
+
 puts "Event 2 (members and chatroom) created successfully"
 
 event3 = Event.create(title: "Chez Dylane", date: Date.current + 10, time: Time.now, user_id: dylane.id, description: "Big teuf")
+pic_event3 = URI.open('https://www.vendee-tourisme.com/sites/www.vendee-tourisme.com/files/styles/paragraphes_carrousel_100/public/thumbnails/image/feux-dartifices_1170x430.jpg?itok=owZKS-u6')
+event3.photo.attach(io: pic_event3, filename: 'event3.png', content_type: 'image/png')
 Chatroom.create(event_id: event3.id)
 Member.create(user: dylane, event: event3)
 Member.create(user: laure, event: event3)
+Member.create(user: clairem, event: event3)
+
 
 puts "Event 3 (members and chatroom) created successfully"
 
 event4 = Event.create(title: "Bday party", date: Date.current + 8, time: Time.now, user_id: clairem.id, description: "twenty-eeeeeeight")
+pic_event4 = URI.open('https://media.istockphoto.com/photos/birthday-candles-close-up-bokeh-background-picture-id587885422?k=20&m=587885422&s=170667a&w=0&h=ccj7wHXQ_nKKbqgy2xQjobi0QRsOCzaZxFZCmp5L0jc=')
+event4.photo.attach(io: pic_event4, filename: 'event3.png', content_type: 'image/png')
+Chatroom.create(event_id: event3.id)
 Member.create(user: clairem, event: event4)
 Member.create(user: dylane, event: event4)
 Member.create(user: ben, event: event4)
