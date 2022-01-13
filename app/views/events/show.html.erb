@@ -1,5 +1,4 @@
 
-
 <div id="show-image">
   <% if @event.photo.attached? %>
     <%= cl_image_tag @event.photo.key, height: 150, width: 200, crop: :fill, class:"img-event" %>
@@ -17,27 +16,25 @@
         <% end %>
       <% end %>
     </div>
+      <div class="description-show-event" data-members-target="description">
+          <h2><%= @event.description %></h2>
+      </div>
   </div>
 </div>
 
-<div class="description-show-event">
-  <h2><%= @event.description %></h2>
-</div>
 
 
-
-<div class="show-title">
-   <h1>
-      <%= @event.title %>
-   </h1>
-</div>
 
 <div class="return-arrow-show">
     <%= link_to events_path do %>
       <i class="fas fa-arrow-left"></i>
+      <div class="show-title">
+        <h1 class>
+            <%= @event.title %>
+        </h1>
+    </div>
     <% end %>
 </div>
-
 
 
 <div class="main-wrapper" data-controller="category-card">
