@@ -6,6 +6,7 @@
     <%= csp_meta_tag %>
     <title><%= meta_title %></title>
     <meta name="description" content="<%= meta_description %>">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <!-- Facebook Open Graph data -->
     <meta property="og:title" content="<%= meta_title %>" />
@@ -42,9 +43,9 @@
 
 
   <body>
-    <%= render 'shared/navbar' %>
-    <%= render 'shared/flashes' %>
-    <%= yield %>
-    <%= render 'shared/footer' %>
+        <%= render 'shared/navbar' %>
+        <%= render 'shared/flashes' %>
+        <%= yield %>
+        <%= render 'shared/footer' %>
   </body>
 </html>

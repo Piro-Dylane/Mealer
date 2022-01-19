@@ -1,4 +1,8 @@
 
+
+
+
+
 <div id="show-image">
   <% if @event.photo.attached? %>
     <%= cl_image_tag @event.photo.key, height: 150, width: 200, crop: :fill, class:"img-event" %>
@@ -125,21 +129,21 @@
     </div>
 </div>
 
-<% if @members.include? Member.find_by(user: current_user.id, event: @event) %>
-  <div class="chatroom-button">
-    <%= link_to event_chatroom_path(@event, @chatroom), class: "img-chat" do  %>
-      <%= image_tag('chat.png') %>
-    <% end %>
-   <%= link_to roulette_event_path(@event), class: "img-roulette" do %>
-      <%= image_tag("roulette.png") %>
-    <% end %>
-  </div>
-  <div class="leave-event-wrapper">
-    <p>Leave event</p>
-  </div>
-  <%= link_to '', event_member_path(@event, Member.find_by(user: current_user.id)), method: :delete, class: "fas fa-times",data: { confirm: "Are you sure you want to leave this event?" }  %>
-<% else %>
-  <div class="join-event">
-    <%= render "members/member_form", event: @event, member:@member %>
-  </div>
-<% end %>
+  <% if @members.include? Member.find_by(user: current_user.id, event: @event) %>
+    <div class="chatroom-button">
+      <%= link_to event_chatroom_path(@event, @chatroom), class: "img-chat" do  %>
+        <%= image_tag('chat.png') %>
+      <% end %>
+    <%= link_to roulette_event_path(@event), class: "img-roulette" do %>
+        <%= image_tag("roulette.png") %>
+      <% end %>
+    </div>
+    <div class="leave-event-wrapper">
+      <p>Leave event</p>
+    </div>
+    <%= link_to '', event_member_path(@event, Member.find_by(user: current_user.id)), method: :delete, class: "fas fa-times",data: { confirm: "Are you sure you want to leave this event?" }  %>
+  <% else %>
+    <div class="join-event">
+      <%= render "members/member_form", event: @event, member:@member %>
+    </div>
+  <% end %>
