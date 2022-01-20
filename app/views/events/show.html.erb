@@ -24,27 +24,28 @@
           <h2><%= @event.description %></h2>
       </div>
   </div>
-</div>
-
-
-
-
-<div class="return-arrow-show">
-    <%= link_to events_path do %>
-      <i class="fas fa-arrow-left"></i>
-      <div class="show-title">
-        <h1 class>
-            <%= @event.title %>
-        </h1>
+    <div class="return-arrow-show">
+          <%= link_to events_path do %>
+            <i class="fas fa-arrow-left"></i>
+            <div class="show-title">
+              <h1 class>
+                  <%= @event.title %>
+              </h1>
+          </div>
+          <% end %>
     </div>
-    <% end %>
 </div>
+
+
+
+
+
 
 
 <div class="main-wrapper" data-controller="category-card">
       <% if @categories %>
-          <div class="category-wrapper" data-category-card-target= "info">
-                <div class="category-form">
+          <div class="category-wrapper " data-category-card-target= "info">
+                <div class="category-form d-flex justify-content-center align-items-center w-100">
                    <%= render "categories/category_form", event: @event, category: @category %>
                 </div>
                 <div class="card-hidden" data-category-card-target= "icon">
